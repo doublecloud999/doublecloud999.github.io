@@ -1,10 +1,10 @@
-baseURL = 'baseURL = 'https://doublecloud999.github.io'
+baseURL = 'https://doublecloud999.github.io'
 languageCode = 'zh-cn'
 title = '技术笔记'
 theme = 'PaperMod'
 
 [params]
-  author = '你的名字'
+  author = 'doublecloud999'
   description = '记录技术学习过程'
   defaultTheme = 'auto'
 
