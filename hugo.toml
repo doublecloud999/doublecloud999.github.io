@@ -3,10 +3,28 @@ languageCode = 'zh-cn'
 title = '技术笔记'
 theme = 'PaperMod'
 
+[taxonomies]
+  tag = 'tags'
+  category = 'categories'
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    lineNos = false
+    codeFences = true
+    guessSyntax = true
+
 [params]
   author = 'doublecloud999'
   description = '记录技术学习过程'
   defaultTheme = 'auto'
+  ShowReadingTime = true
+  ShowWordCount = true
+  ShowCodeCopyButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowToc = true
+  TocOpen = false
 
 [params.profileMode]
   enabled = true
@@ -24,6 +42,11 @@ theme = 'PaperMod'
   weight = 20
 
 [[menu.main]]
+  name = '分类'
+  url = '/categories/'
+  weight = 30
+
+[[menu.main]]
   name = '标签'
   url = '/tags/'
-  weight = 30
+  weight = 40

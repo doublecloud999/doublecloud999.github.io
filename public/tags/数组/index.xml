@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>数组 on 技术笔记</title>
+    <link>http://localhost:1313/tags/%E6%95%B0%E7%BB%84/</link>
+    <description>Recent content in 数组 on 技术笔记</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 15 Jul 2026 22:20:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%95%B0%E7%BB%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>算法笔记 01:数组</title>
+      <link>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E7%AF%871/</link>
+      <pubDate>Wed, 15 Jul 2026 22:20:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E7%AF%871/</guid>
+      <description>从静态数组的内存模型讲起,梳理数组的增删改查操作及其时间复杂度,并引出动态数组。</description>
+    </item>
+  </channel>
+</rss>

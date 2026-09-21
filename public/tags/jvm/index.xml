@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>JVM on 技术笔记</title>
+    <link>http://localhost:1313/tags/jvm/</link>
+    <description>Recent content in JVM on 技术笔记</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 15 Jul 2026 22:13:28 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/jvm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java 基础笔记</title>
+      <link>http://localhost:1313/posts/java%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 15 Jul 2026 22:13:28 +0800</pubDate>
+      <guid>http://localhost:1313/posts/java%E7%AC%94%E8%AE%B0/</guid>
+      <description>Java 平台无关性、加载与执行机制、环境变量、基础语法、数据类型、流程控制,以及面向对象与泛型入门。</description>
+    </item>
+  </channel>
+</rss>
