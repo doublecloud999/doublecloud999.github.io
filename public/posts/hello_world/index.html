@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
-
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>blog 1,自建博客网站 | 技术笔记</title>
-<meta name="keywords" content="">
-<meta name="description" content="2026.7.9
+<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>blog 1,自建博客网站 | 技术笔记</title><meta name=keywords content><meta name=description content="2026.7.9
 第一篇博客
-建立个人博客网站（Hugo &#43; GitHub Pages）完整知识整理
+建立个人博客网站（Hugo + GitHub Pages）完整知识整理
 
 基于实际操作经验整理，包含所有踩坑记录和解决方案
 
@@ -65,15 +56,15 @@ git submodule update --init --recursive
 	
 
 完整配置示例：
-baseURL = &#39;https://doublecloud999.github.io&#39;
-languageCode = &#39;zh-cn&#39;
-title = &#39;技术笔记&#39;
-theme = &#39;PaperMod&#39;
+baseURL = 'https://doublecloud999.github.io'
+languageCode = 'zh-cn'
+title = '技术笔记'
+theme = 'PaperMod'
 
 [params]
-  author = &#39;doublecloud999&#39;
-  description = &#39;记录技术学习过程&#39;
-  defaultTheme = &#39;auto&#39;
+  author = 'doublecloud999'
+  description = '记录技术学习过程'
+  defaultTheme = 'auto'
 
 [params.profileMode]
   enabled = true
@@ -81,743 +72,162 @@ theme = &#39;PaperMod&#39;
   subtitle = &#34;记录技术学习过程&#34;
 
 [[menu.main]]
-  name = &#39;首页&#39;
-  url = &#39;/&#39;
+  name = '首页'
+  url = '/'
   weight = 10
 
 [[menu.main]]
-  name = &#39;文章&#39;
-  url = &#39;/posts/&#39;
+  name = '文章'
+  url = '/posts/'
   weight = 20
 
 [[menu.main]]
-  name = &#39;标签&#39;
-  url = &#39;/tags/&#39;
+  name = '标签'
+  url = '/tags/'
   weight = 30
 
-踩坑记录：baseURL 初始默认是 https://example.com，必须改成你的真实地址，否则所有链接都会跳转到 example.com">
-<meta name="author" content="doublecloud999">
-<link rel="canonical" href="http://localhost:1313/posts/hello_world/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.89ca4972ab5e6aaa05e9a0dae0c4bb64b26585bc79e36f5cf33614eea0283abe.css" integrity="sha256-icpJcqteaqoF6aDa4MS7ZLJlhbx5429c8zYU7qAoOr4=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/hello_world/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script>
-</head>
-<body id="top">
-    <header class="header">
-    <nav class="header-nav">
-        <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="技术笔记 (Alt + H)">技术笔记</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu" class="menu">
-            <li>
-                <a href="http://localhost:1313/" title="首页">
-                    <span>首页</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/posts/" title="文章">
-                    <span>文章</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/categories/" title="分类">
-                    <span>分类</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/tags/" title="标签">
-                    <span>标签</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    <nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
-            <a href="/">Home</a>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
-                <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-            <a href="/posts/">Posts</a>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
-        <polyline points="9 18 15 12 9 6"></polyline>
-    </svg>
-</nav>
-    <h1 class="post-title entry-hint-parent">
-      blog 1,自建博客网站
-    </h1>
-    <div class="post-meta">
-
-<span title='2026-07-09 14:40:30 +0800 CST'>July 9, 2026</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>727 words</span>&nbsp;·&nbsp;<span>doublecloud999</span>
-
-</div>
-  </header> <details class="toc" >
-    <summary accesskey="c" title="(Alt + C)">
-        <span class="title">Table of Contents</span>
-    </summary>
-
-    <div class="inner"><ul>
-            <li>
-                <a href="#%e5%bb%ba%e7%ab%8b%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%e7%bd%91%e7%ab%99hugo--github-pages%e5%ae%8c%e6%95%b4%e7%9f%a5%e8%af%86%e6%95%b4%e7%90%86" aria-label="建立个人博客网站（Hugo &#43; GitHub Pages）完整知识整理">建立个人博客网站（Hugo + GitHub Pages）完整知识整理</a><ul>
-                    
-            <li>
-                <a href="#%e4%b8%80%e5%89%8d%e7%bd%ae%e5%87%86%e5%a4%87" aria-label="一、前置准备">一、前置准备</a></li>
-            <li>
-                <a href="#%e4%ba%8chugo-%e5%8d%9a%e5%ae%a2%e6%90%ad%e5%bb%ba%e6%ad%a5%e9%aa%a4" aria-label="二、Hugo 博客搭建步骤">二、Hugo 博客搭建步骤</a><ul>
-                    
-            <li>
-                <a href="#21-%e5%88%9b%e5%bb%ba%e5%8d%9a%e5%ae%a2%e7%ab%99%e7%82%b9" aria-label="2.1 创建博客站点">2.1 创建博客站点</a></li>
-            <li>
-                <a href="#22-%e5%ae%89%e8%a3%85%e4%b8%bb%e9%a2%98" aria-label="2.2 安装主题">2.2 安装主题</a></li>
-            <li>
-                <a href="#23-%e9%85%8d%e7%bd%ae-hugotoml" aria-label="2.3 配置 hugo.toml">2.3 配置 hugo.toml</a></li>
-            <li>
-                <a href="#24-%e5%88%9b%e5%bb%ba%e6%96%87%e7%ab%a0" aria-label="2.4 创建文章">2.4 创建文章</a></li></ul>
-            </li>
-            <li>
-                <a href="#%e4%b8%89github-pages-%e9%83%a8%e7%bd%b2" aria-label="三、GitHub Pages 部署">三、GitHub Pages 部署</a><ul>
-                    
-            <li>
-                <a href="#31-%e5%88%9b%e5%bb%ba%e4%bb%93%e5%ba%93" aria-label="3.1 创建仓库">3.1 创建仓库</a></li>
-            <li>
-                <a href="#32-%e9%85%8d%e7%bd%ae-git" aria-label="3.2 配置 Git">3.2 配置 Git</a></li>
-            <li>
-                <a href="#33-%e6%8e%a8%e9%80%81%e4%bb%a3%e7%a0%81" aria-label="3.3 推送代码">3.3 推送代码</a></li>
-            <li>
-                <a href="#34-%e7%94%9f%e6%88%90-token" aria-label="3.4 生成 Token">3.4 生成 Token</a></li>
-            <li>
-                <a href="#35-%e7%94%a8-token-%e6%8e%a8%e9%80%81" aria-label="3.5 用 Token 推送">3.5 用 Token 推送</a></li></ul>
-            </li>
-            <li>
-                <a href="#%e5%9b%9bgithub-actions-%e8%87%aa%e5%8a%a8%e9%83%a8%e7%bd%b2" aria-label="四、GitHub Actions 自动部署">四、GitHub Actions 自动部署</a><ul>
-                    
-            <li>
-                <a href="#41-%e5%88%9b%e5%bb%ba-deployyml" aria-label="4.1 创建 deploy.yml">4.1 创建 deploy.yml</a></li>
-            <li>
-                <a href="#42-deployyml-%e5%86%85%e5%ae%b9" aria-label="4.2 deploy.yml 内容">4.2 deploy.yml 内容</a></li>
-            <li>
-                <a href="#43-%e9%85%8d%e7%bd%ae-github-pages" aria-label="4.3 配置 GitHub Pages">4.3 配置 GitHub Pages</a></li>
-            <li>
-                <a href="#44-%e9%85%8d%e7%bd%ae-actions-%e6%9d%83%e9%99%90" aria-label="4.4 配置 Actions 权限">4.4 配置 Actions 权限</a></li></ul>
-            </li>
-            <li>
-                <a href="#%e4%ba%94%e7%bd%91%e7%bb%9c%e9%97%ae%e9%a2%98%e5%a4%84%e7%90%86" aria-label="五、网络问题处理">五、网络问题处理</a><ul>
-                    
-            <li>
-                <a href="#51-git-%e8%b5%b0%e4%bb%a3%e7%90%86" aria-label="5.1 Git 走代理">5.1 Git 走代理</a></li>
-            <li>
-                <a href="#52-%e5%8f%96%e6%b6%88%e4%bb%a3%e7%90%86" aria-label="5.2 取消代理">5.2 取消代理</a></li></ul>
-            </li>
-            <li>
-                <a href="#%e5%85%ad%e5%b8%b8%e8%a7%81%e9%94%99%e8%af%af%e5%8f%8a%e8%a7%a3%e5%86%b3" aria-label="六、常见错误及解决">六、常见错误及解决</a></li>
-            <li>
-                <a href="#%e4%b8%83%e5%90%8e%e7%bb%ad%e6%9b%b4%e6%96%b0%e5%8d%9a%e5%ae%a2%e6%b5%81%e7%a8%8b" aria-label="七、后续更新博客流程">七、后续更新博客流程</a><ul>
-                    
-            <li>
-                <a href="#71-%e5%86%99%e6%96%b0%e6%96%87%e7%ab%a0" aria-label="7.1 写新文章">7.1 写新文章</a></li>
-            <li>
-                <a href="#72-%e7%bc%96%e8%be%91%e5%86%85%e5%ae%b9" aria-label="7.2 编辑内容">7.2 编辑内容</a></li>
-            <li>
-                <a href="#73-%e6%9c%ac%e5%9c%b0%e9%a2%84%e8%a7%88%e5%8f%af%e9%80%89" aria-label="7.3 本地预览（可选）">7.3 本地预览（可选）</a></li>
-            <li>
-                <a href="#74-%e6%8e%a8%e9%80%81%e5%88%b0-github" aria-label="7.4 推送到 GitHub">7.4 推送到 GitHub</a></li>
-            <li>
-                <a href="#75-%e7%ad%89%e5%be%85%e9%83%a8%e7%bd%b2" aria-label="7.5 等待部署">7.5 等待部署</a></li></ul>
-            </li>
-            <li>
-                <a href="#%e5%85%ab%e6%a0%b8%e5%bf%83%e8%b8%a9%e5%9d%91%e6%80%bb%e7%bb%93" aria-label="八、核心踩坑总结">八、核心踩坑总结</a></li>
-            <li>
-                <a href="#%e4%b9%9d%e5%8d%9a%e5%ae%a2%e5%9c%b0%e5%9d%80" aria-label="九、博客地址">九、博客地址</a>
-            </li>
-        </ul>
-        </li>
-        </ul>
-    </div>
-</details>
-
-  <div class="post-content md-content"><p>2026.7.9</p>
-<p>第一篇博客</p>
-<h1 id="建立个人博客网站hugo--github-pages完整知识整理">建立个人博客网站（Hugo + GitHub Pages）完整知识整理<a hidden class="anchor" aria-hidden="true" href="#建立个人博客网站hugo--github-pages完整知识整理">#</a></h1>
-<blockquote>
-<p>基于实际操作经验整理，包含所有踩坑记录和解决方案</p>
-</blockquote>
-<hr>
-<h2 id="一前置准备">一、前置准备<a hidden class="anchor" aria-hidden="true" href="#一前置准备">#</a></h2>
-<ol>
-<li>安装 Hugo（extended 版本）</li>
-<li>安装 Git</li>
-<li>注册 GitHub 账号</li>
-<li>安装 VS Code</li>
-</ol>
-<hr>
-<h2 id="二hugo-博客搭建步骤">二、Hugo 博客搭建步骤<a hidden class="anchor" aria-hidden="true" href="#二hugo-博客搭建步骤">#</a></h2>
-<h3 id="21-创建博客站点">2.1 创建博客站点<a hidden class="anchor" aria-hidden="true" href="#21-创建博客站点">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> 你想放博客的目录
-</span></span><span class="line"><span class="cl">hugo new site 博客文件夹名
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> 博客文件夹名
-</span></span><span class="line"><span class="cl">git init
-</span></span></code></pre></div><h3 id="22-安装主题">2.2 安装主题<a hidden class="anchor" aria-hidden="true" href="#22-安装主题">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git submodule add --depth<span class="o">=</span><span class="m">1</span> https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
-</span></span><span class="line"><span class="cl">git submodule update --init --recursive
-</span></span></code></pre></div><h3 id="23-配置-hugotoml">2.3 配置 hugo.toml<a hidden class="anchor" aria-hidden="true" href="#23-配置-hugotoml">#</a></h3>
-<p>关键配置项：</p>
-<table>
-	<thead>
-			<tr>
-					<th>配置项</th>
-					<th>说明</th>
-					<th>示例</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td>baseURL</td>
-					<td>GitHub Pages 地址</td>
-					<td><code>https://用户名.github.io</code></td>
-			</tr>
-			<tr>
-					<td>languageCode</td>
-					<td>语言代码</td>
-					<td><code>zh-cn</code></td>
-			</tr>
-			<tr>
-					<td>title</td>
-					<td>博客标题</td>
-					<td><code>技术笔记</code></td>
-			</tr>
-			<tr>
-					<td>theme</td>
-					<td>主题名</td>
-					<td><code>PaperMod</code></td>
-			</tr>
-	</tbody>
-</table>
-<p>完整配置示例：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s1">&#39;https://doublecloud999.github.io&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">languageCode</span> <span class="p">=</span> <span class="s1">&#39;zh-cn&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;技术笔记&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">theme</span> <span class="p">=</span> <span class="s1">&#39;PaperMod&#39;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">author</span> <span class="p">=</span> <span class="s1">&#39;doublecloud999&#39;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">description</span> <span class="p">=</span> <span class="s1">&#39;记录技术学习过程&#39;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">defaultTheme</span> <span class="p">=</span> <span class="s1">&#39;auto&#39;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">profileMode</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">enabled</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;你好&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">subtitle</span> <span class="p">=</span> <span class="s2">&#34;记录技术学习过程&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s1">&#39;首页&#39;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">url</span> <span class="p">=</span> <span class="s1">&#39;/&#39;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">10</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s1">&#39;文章&#39;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">url</span> <span class="p">=</span> <span class="s1">&#39;/posts/&#39;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">20</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">menu</span><span class="p">.</span><span class="nx">main</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s1">&#39;标签&#39;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">url</span> <span class="p">=</span> <span class="s1">&#39;/tags/&#39;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">30</span>
-</span></span></code></pre></div><blockquote>
-<p><strong>踩坑记录</strong>：baseURL 初始默认是 <code>https://example.com</code>，必须改成你的真实地址，否则所有链接都会跳转到 example.com</p>
-</blockquote>
-<h3 id="24-创建文章">2.4 创建文章<a hidden class="anchor" aria-hidden="true" href="#24-创建文章">#</a></h3>
-<p>方式一：命令行创建（自动生成 Front Matter）</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new content posts/文章标题.md
-</span></span></code></pre></div><p>方式二：手动创建</p>
-<p>在 VS Code 中右键 <code>content/posts</code> 文件夹 → 新建文件 → 输入 <code>文章标题.md</code></p>
-<p>文章格式：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">---
-</span></span><span class="line"><span class="cl">title: &#34;文章标题&#34;
-</span></span><span class="line"><span class="cl">date: 2026-07-10T13:51:00+08:00
-</span></span><span class="line"><span class="cl">draft: false
-</span></span><span class="line"><span class="cl">---
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">文章内容
-</span></span></code></pre></div><blockquote>
-<p><strong>踩坑记录</strong>：</p>
-<ol>
-<li>Front Matter 格式必须用 <code>---</code> 包裹</li>
-<li><code>draft</code> 必须设为 <code>false</code>，否则文章不显示</li>
-<li>不能有多套 Front Matter（如同时有 <code>+++</code> 和 <code>---</code>）</li>
-</ol>
-</blockquote>
-<hr>
-<h2 id="三github-pages-部署">三、GitHub Pages 部署<a hidden class="anchor" aria-hidden="true" href="#三github-pages-部署">#</a></h2>
-<h3 id="31-创建仓库">3.1 创建仓库<a hidden class="anchor" aria-hidden="true" href="#31-创建仓库">#</a></h3>
-<ul>
-<li>仓库名必须是：<code>用户名.github.io</code>（如 <code>doublecloud999.github.io</code>）</li>
-<li>必须是 <strong>Public</strong></li>
-</ul>
-<h3 id="32-配置-git">3.2 配置 Git<a hidden class="anchor" aria-hidden="true" href="#32-配置-git">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global user.email <span class="s2">&#34;你的邮箱&#34;</span>
-</span></span><span class="line"><span class="cl">git config --global user.name <span class="s2">&#34;你的名字&#34;</span>
-</span></span></code></pre></div><h3 id="33-推送代码">3.3 推送代码<a hidden class="anchor" aria-hidden="true" href="#33-推送代码">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git remote add origin https://github.com/用户名/用户名.github.io.git
-</span></span><span class="line"><span class="cl">git add .
-</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;init blog&#34;</span>
-</span></span><span class="line"><span class="cl">git branch -M main
-</span></span><span class="line"><span class="cl">git push -u origin main
-</span></span></code></pre></div><blockquote>
-<p><strong>踩坑记录</strong>：GitHub 已不支持密码验证，必须用 Personal Access Token</p>
-</blockquote>
-<h3 id="34-生成-token">3.4 生成 Token<a hidden class="anchor" aria-hidden="true" href="#34-生成-token">#</a></h3>
-<ol>
-<li>GitHub 右上角头像 → <strong>Settings</strong></li>
-<li>左侧最下方 → <strong>Developer settings</strong></li>
-<li><strong>Personal access tokens</strong> → <strong>Tokens (classic)</strong></li>
-<li>点击 <strong>Generate new token (classic)</strong></li>
-<li>Note 填 <code>blog deploy</code></li>
-<li>Expiration 选 <strong>No expiration</strong>（永不过期）</li>
-<li>勾选 <strong>repo</strong>（全部）和 <strong>workflow</strong></li>
-<li>点击 <strong>Generate token</strong></li>
-<li><strong>复制 Token</strong>（只显示一次）</li>
-</ol>
-<h3 id="35-用-token-推送">3.5 用 Token 推送<a hidden class="anchor" aria-hidden="true" href="#35-用-token-推送">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git remote set-url origin https://用户名:Token@github.com/用户名/用户名.github.io.git
-</span></span><span class="line"><span class="cl">git push --set-upstream origin main
-</span></span></code></pre></div><hr>
-<h2 id="四github-actions-自动部署">四、GitHub Actions 自动部署<a hidden class="anchor" aria-hidden="true" href="#四github-actions-自动部署">#</a></h2>
-<h3 id="41-创建-deployyml">4.1 创建 deploy.yml<a hidden class="anchor" aria-hidden="true" href="#41-创建-deployyml">#</a></h3>
-<p>路径：<code>.github/workflows/deploy.yml</code></p>
-<blockquote>
-<p><strong>踩坑记录</strong>：文件夹名必须是 <code>.github</code>（前面有点），不是 <code>github</code></p>
-</blockquote>
-<p>最终目录结构：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">blog/
-</span></span><span class="line"><span class="cl">├── .github/
-</span></span><span class="line"><span class="cl">│   └── workflows/
-</span></span><span class="line"><span class="cl">│       └── deploy.yml
-</span></span><span class="line"><span class="cl">├── archetypes/
-</span></span><span class="line"><span class="cl">├── content/
-</span></span><span class="line"><span class="cl">│   └── posts/
-</span></span><span class="line"><span class="cl">│       └── hello_world.md
-</span></span><span class="line"><span class="cl">├── themes/
-</span></span><span class="line"><span class="cl">│   └── PaperMod/
-</span></span><span class="line"><span class="cl">├── hugo.toml
-</span></span><span class="line"><span class="cl">└── ...
-</span></span></code></pre></div><h3 id="42-deployyml-内容">4.2 deploy.yml 内容<a hidden class="anchor" aria-hidden="true" href="#42-deployyml-内容">#</a></h3>
-<blockquote>
-<p><strong>核心踩坑</strong>：对于 <code>username.github.io</code> 仓库，必须用 GitHub 官方部署方式，不能用推送到 <code>gh-pages</code> 分支的方式</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy Hugo</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nt">on</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="l">main]</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nt">permissions</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l">read</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">pages</span><span class="p">:</span><span class="w"> </span><span class="l">write</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">id-token</span><span class="p">:</span><span class="w"> </span><span class="l">write</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nt">concurrency</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">group</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;pages&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">cancel-in-progress</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="nt">jobs</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">build</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v4</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">submodules</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Hugo</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-hugo@v3</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">hugo-version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;latest&#39;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">extended</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">hugo --minify</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Upload artifact</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/upload-pages-artifact@v3</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">./public</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">deploy</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">github-pages</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l">${{ steps.deployment.outputs.page_url }}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="l">build</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy to GitHub Pages</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l">deployment</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/deploy-pages@v4</span><span class="w">
-</span></span></span></code></pre></div><blockquote>
-<p><strong>为什么不能用 <code>peaceiris/actions-gh-pages</code></strong>：
-对于 <code>username.github.io</code> 这种特殊仓库名，GitHub 会自动启用内置的 <code>pages-build-deployment</code> 工作流，该工作流无法禁用。如果使用推送到 <code>gh-pages</code> 分支的方式，会与内置工作流冲突，导致部署被覆盖。</p>
-</blockquote>
-<h3 id="43-配置-github-pages">4.3 配置 GitHub Pages<a hidden class="anchor" aria-hidden="true" href="#43-配置-github-pages">#</a></h3>
-<ol>
-<li>仓库页面 → <strong>Settings</strong> → <strong>Pages</strong></li>
-<li><code>Source</code> 选择 <strong>GitHub Actions</strong></li>
-<li>点击 <strong>Save</strong></li>
-</ol>
-<h3 id="44-配置-actions-权限">4.4 配置 Actions 权限<a hidden class="anchor" aria-hidden="true" href="#44-配置-actions-权限">#</a></h3>
-<ol>
-<li>仓库页面 → <strong>Settings</strong> → <strong>Actions</strong> → <strong>General</strong></li>
-<li>往下滚动到 <strong>Workflow permissions</strong></li>
-<li>选择 <strong>Read and write permissions</strong></li>
-<li>勾选 <strong>Allow GitHub Actions to create and approve pull requests</strong></li>
-<li>点击 <strong>Save</strong></li>
-</ol>
-<hr>
-<h2 id="五网络问题处理">五、网络问题处理<a hidden class="anchor" aria-hidden="true" href="#五网络问题处理">#</a></h2>
-<h3 id="51-git-走代理">5.1 Git 走代理<a hidden class="anchor" aria-hidden="true" href="#51-git-走代理">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global http.proxy http://127.0.0.1:代理端口
-</span></span><span class="line"><span class="cl">git config --global https.proxy http://127.0.0.1:代理端口
-</span></span></code></pre></div><p>常见代理端口：</p>
-<ul>
-<li>Clash：7890</li>
-<li>你的梯子：33210（HTTP）/ 33211（SOCKS5）</li>
-</ul>
-<h3 id="52-取消代理">5.2 取消代理<a hidden class="anchor" aria-hidden="true" href="#52-取消代理">#</a></h3>
-<p>推送完成后可以取消：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global --unset http.proxy
-</span></span><span class="line"><span class="cl">git config --global --unset https.proxy
-</span></span></code></pre></div><hr>
-<h2 id="六常见错误及解决">六、常见错误及解决<a hidden class="anchor" aria-hidden="true" href="#六常见错误及解决">#</a></h2>
-<table>
-	<thead>
-			<tr>
-					<th>错误信息</th>
-					<th>原因</th>
-					<th>解决方案</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td><code>LF will be replaced by CRLF</code></td>
-					<td>Windows 和 Linux 换行符不同</td>
-					<td>只是警告，忽略即可</td>
-			</tr>
-			<tr>
-					<td><code>Author identity unknown</code></td>
-					<td>Git 未配置用户名和邮箱</td>
-					<td><code>git config --global user.email</code> 和 <code>user.name</code></td>
-			</tr>
-			<tr>
-					<td><code>Connection was reset</code></td>
-					<td>网络或代理问题</td>
-					<td>配置 Git 代理或检查梯子</td>
-			</tr>
-			<tr>
-					<td><code>src refspec main does not match any</code></td>
-					<td>没有提交记录</td>
-					<td>先 <code>git commit</code> 再推送</td>
-			</tr>
-			<tr>
-					<td><code>! [rejected] main -&gt; main (fetch first)</code></td>
-					<td>远程有本地没有的更改</td>
-					<td>先 <code>git pull origin main</code> 再 <code>git push</code></td>
-			</tr>
-			<tr>
-					<td>打开 vim 编辑器</td>
-					<td><code>git pull</code> 需要合并消息</td>
-					<td>按 <code>Esc</code>，输入 <code>:wq</code>，回车</td>
-			</tr>
-			<tr>
-					<td>文章 404</td>
-					<td>content 为空或 draft=true</td>
-					<td>创建文章，确保 <code>draft: false</code></td>
-			</tr>
-			<tr>
-					<td>文章列表为空</td>
-					<td>Front Matter 格式错误</td>
-					<td>只保留一套 <code>---</code>，draft 设为 false</td>
-			</tr>
-			<tr>
-					<td>跳转到 example.com</td>
-					<td>baseURL 未修改</td>
-					<td><code>hugo.toml</code> 中改为真实地址</td>
-			</tr>
-			<tr>
-					<td>Actions 权限不足</td>
-					<td>未开启写入权限</td>
-					<td>Settings → Actions → Read and write permissions</td>
-			</tr>
-			<tr>
-					<td><code>Invalid username or token</code></td>
-					<td>密码验证已禁用</td>
-					<td>使用 Personal Access Token</td>
-			</tr>
-			<tr>
-					<td><code>Permission denied to github-actions[bot]</code></td>
-					<td>Actions 权限不足</td>
-					<td>开启 Read and write permissions</td>
-			</tr>
-	</tbody>
-</table>
-<hr>
-<h2 id="七后续更新博客流程">七、后续更新博客流程<a hidden class="anchor" aria-hidden="true" href="#七后续更新博客流程">#</a></h2>
-<h3 id="71-写新文章">7.1 写新文章<a hidden class="anchor" aria-hidden="true" href="#71-写新文章">#</a></h3>
-<p>方式一（命令行）：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new content posts/文章标题.md
-</span></span></code></pre></div><p>方式二（手动）：</p>
-<p>VS Code 中右键 <code>content/posts</code> → 新建文件 → 输入 <code>文章标题.md</code></p>
-<h3 id="72-编辑内容">7.2 编辑内容<a hidden class="anchor" aria-hidden="true" href="#72-编辑内容">#</a></h3>
-<p>打开文件，在 <code>---</code> 下方写 Markdown 内容。</p>
-<h3 id="73-本地预览可选">7.3 本地预览（可选）<a hidden class="anchor" aria-hidden="true" href="#73-本地预览可选">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo server -D
-</span></span></code></pre></div><p>浏览器访问 <code>http://localhost:1313</code></p>
-<h3 id="74-推送到-github">7.4 推送到 GitHub<a hidden class="anchor" aria-hidden="true" href="#74-推送到-github">#</a></h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git pull origin main
-</span></span><span class="line"><span class="cl">git add .
-</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;add: 文章标题&#34;</span>
-</span></span><span class="line"><span class="cl">git push
-</span></span></code></pre></div><h3 id="75-等待部署">7.5 等待部署<a hidden class="anchor" aria-hidden="true" href="#75-等待部署">#</a></h3>
-<p>等 2-3 分钟，GitHub Actions 自动构建并部署。</p>
-<hr>
-<h2 id="八核心踩坑总结">八、核心踩坑总结<a hidden class="anchor" aria-hidden="true" href="#八核心踩坑总结">#</a></h2>
-<ol>
-<li><strong><code>username.github.io</code> 是特殊仓库</strong>：GitHub 会自动启用内置 <code>pages-build-deployment</code> 工作流，无法禁用</li>
-<li><strong>必须用官方部署方式</strong>：使用 <code>actions/deploy-pages</code>，不能用推送到 <code>gh-pages</code> 分支的方式</li>
-<li><strong>baseURL 必须正确</strong>：改成 <code>https://用户名.github.io</code>，不能是 example.com</li>
-<li><strong>文章 draft 必须 false</strong>：否则 Hugo 不显示</li>
-<li><strong>Front Matter 格式正确</strong>：用 <code>---</code> 包裹，不能有多套</li>
-<li><strong>GitHub 不支持密码验证</strong>：必须用 Token，且需要 <code>repo</code> + <code>workflow</code> 权限</li>
-<li><strong>推送前先 pull</strong>：避免远程冲突</li>
-<li><strong>.github 文件夹名</strong>：前面有点，不是 <code>github</code></li>
-<li><strong>Actions 权限要开启</strong>：Read and write permissions</li>
-<li><strong>网络问题配代理</strong>：Git 不走系统代理，需要单独配置</li>
-</ol>
-<hr>
-<h2 id="九博客地址">九、博客地址<a hidden class="anchor" aria-hidden="true" href="#九博客地址">#</a></h2>
-<p>部署成功后访问：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://doublecloud999.github.io
-</span></span></code></pre></div><hr>
-<p><em>整理时间：2026-07-10</em></p>
-
-
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-    </ul>
-<nav class="paginav">
-  <a class="prev" href="http://localhost:1313/posts/java%E7%AC%94%E8%AE%B0/">
-    <span class="title">« Prev</span>
-    <span>Java 基础笔记</span>
-  </a>
-</nav>
-
-  </footer>
-</article>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">技术笔记</a></span> · 
-
-    
-    
-    <span>
-        Powered by
-        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
-        <polyline points="17 11 12 6 7 11"></polyline>
-        <polyline points="17 18 12 13 7 18"></polyline>
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var toplink = document.getElementById("top-link");
-    window.onscroll = function () {
-        const scrollThreshold = window.innerHeight;
-        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
-            toplink.classList.remove("hidden");
-        } else {
-            toplink.classList.add("hidden");
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'copy';
-
-        function copyingDone() {
-            copybutton.innerHTML = 'copied!';
-            setTimeout(() => {
-                copybutton.innerHTML = 'copy';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
-</script>
-</body>
-
-</html>
+踩坑记录：baseURL 初始默认是 https://example.com，必须改成你的真实地址，否则所有链接都会跳转到 example.com"><meta name=author content="doublecloud999"><link rel=canonical href=https://doublecloud999.github.io/posts/hello_world/><link crossorigin=anonymous href=/assets/css/stylesheet.89ca4972ab5e6aaa05e9a0dae0c4bb64b26585bc79e36f5cf33614eea0283abe.css integrity="sha256-icpJcqteaqoF6aDa4MS7ZLJlhbx5429c8zYU7qAoOr4=" rel="preload stylesheet" as=style><link rel=icon href=https://doublecloud999.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://doublecloud999.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://doublecloud999.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://doublecloud999.github.io/apple-touch-icon.png><link rel=mask-icon href=https://doublecloud999.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://doublecloud999.github.io/posts/hello_world/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><meta property="og:url" content="https://doublecloud999.github.io/posts/hello_world/"><meta property="og:site_name" content="技术笔记"><meta property="og:title" content="blog 1,自建博客网站"><meta property="og:description" content="2026.7.9
+第一篇博客
+建立个人博客网站（Hugo + GitHub Pages）完整知识整理 基于实际操作经验整理，包含所有踩坑记录和解决方案
+一、前置准备 安装 Hugo（extended 版本） 安装 Git 注册 GitHub 账号 安装 VS Code 二、Hugo 博客搭建步骤 2.1 创建博客站点 cd 你想放博客的目录 hugo new site 博客文件夹名 cd 博客文件夹名 git init 2.2 安装主题 git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod git submodule update --init --recursive 2.3 配置 hugo.toml 关键配置项：
+配置项 说明 示例 baseURL GitHub Pages 地址 https://用户名.github.io languageCode 语言代码 zh-cn title 博客标题 技术笔记 theme 主题名 PaperMod 完整配置示例：
+baseURL = 'https://doublecloud999.github.io' languageCode = 'zh-cn' title = '技术笔记' theme = 'PaperMod' [params] author = 'doublecloud999' description = '记录技术学习过程' defaultTheme = 'auto' [params.profileMode] enabled = true title = &#34;你好&#34; subtitle = &#34;记录技术学习过程&#34; [[menu.main]] name = '首页' url = '/' weight = 10 [[menu.main]] name = '文章' url = '/posts/' weight = 20 [[menu.main]] name = '标签' url = '/tags/' weight = 30 踩坑记录：baseURL 初始默认是 https://example.com，必须改成你的真实地址，否则所有链接都会跳转到 example.com"><meta property="og:locale" content="zh_cn"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2026-07-09T14:40:30+08:00"><meta property="article:modified_time" content="2026-07-09T14:40:30+08:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="blog 1,自建博客网站"><meta name=twitter:description content="2026.7.9
+第一篇博客
+建立个人博客网站（Hugo + GitHub Pages）完整知识整理 基于实际操作经验整理，包含所有踩坑记录和解决方案
+一、前置准备 安装 Hugo（extended 版本） 安装 Git 注册 GitHub 账号 安装 VS Code 二、Hugo 博客搭建步骤 2.1 创建博客站点 cd 你想放博客的目录 hugo new site 博客文件夹名 cd 博客文件夹名 git init 2.2 安装主题 git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod git submodule update --init --recursive 2.3 配置 hugo.toml 关键配置项：
+配置项 说明 示例 baseURL GitHub Pages 地址 https://用户名.github.io languageCode 语言代码 zh-cn title 博客标题 技术笔记 theme 主题名 PaperMod 完整配置示例：
+baseURL = 'https://doublecloud999.github.io' languageCode = 'zh-cn' title = '技术笔记' theme = 'PaperMod' [params] author = 'doublecloud999' description = '记录技术学习过程' defaultTheme = 'auto' [params.profileMode] enabled = true title = &#34;你好&#34; subtitle = &#34;记录技术学习过程&#34; [[menu.main]] name = '首页' url = '/' weight = 10 [[menu.main]] name = '文章' url = '/posts/' weight = 20 [[menu.main]] name = '标签' url = '/tags/' weight = 30 踩坑记录：baseURL 初始默认是 https://example.com，必须改成你的真实地址，否则所有链接都会跳转到 example.com"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://doublecloud999.github.io/posts/"},{"@type":"ListItem","position":2,"name":"blog 1,自建博客网站","item":"https://doublecloud999.github.io/posts/hello_world/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"blog 1,自建博客网站","name":"blog 1,自建博客网站","description":"2026.7.9\n第一篇博客\n建立个人博客网站（Hugo + GitHub Pages）完整知识整理 基于实际操作经验整理，包含所有踩坑记录和解决方案\n一、前置准备 安装 Hugo（extended 版本） 安装 Git 注册 GitHub 账号 安装 VS Code 二、Hugo 博客搭建步骤 2.1 创建博客站点 cd 你想放博客的目录 hugo new site 博客文件夹名 cd 博客文件夹名 git init 2.2 安装主题 git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod git submodule update --init --recursive 2.3 配置 hugo.toml 关键配置项：\n配置项 说明 示例 baseURL GitHub Pages 地址 https://用户名.github.io languageCode 语言代码 zh-cn title 博客标题 技术笔记 theme 主题名 PaperMod 完整配置示例：\nbaseURL = \u0026#39;https://doublecloud999.github.io\u0026#39; languageCode = \u0026#39;zh-cn\u0026#39; title = \u0026#39;技术笔记\u0026#39; theme = \u0026#39;PaperMod\u0026#39; [params] author = \u0026#39;doublecloud999\u0026#39; description = \u0026#39;记录技术学习过程\u0026#39; defaultTheme = \u0026#39;auto\u0026#39; [params.profileMode] enabled = true title = \u0026#34;你好\u0026#34; subtitle = \u0026#34;记录技术学习过程\u0026#34; [[menu.main]] name = \u0026#39;首页\u0026#39; url = \u0026#39;/\u0026#39; weight = 10 [[menu.main]] name = \u0026#39;文章\u0026#39; url = \u0026#39;/posts/\u0026#39; weight = 20 [[menu.main]] name = \u0026#39;标签\u0026#39; url = \u0026#39;/tags/\u0026#39; weight = 30 踩坑记录：baseURL 初始默认是 https://example.com，必须改成你的真实地址，否则所有链接都会跳转到 example.com\n","keywords":[],"articleBody":"2026.7.9\n第一篇博客\n建立个人博客网站（Hugo + GitHub Pages）完整知识整理 基于实际操作经验整理，包含所有踩坑记录和解决方案\n一、前置准备 安装 Hugo（extended 版本） 安装 Git 注册 GitHub 账号 安装 VS Code 二、Hugo 博客搭建步骤 2.1 创建博客站点 cd 你想放博客的目录 hugo new site 博客文件夹名 cd 博客文件夹名 git init 2.2 安装主题 git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod git submodule update --init --recursive 2.3 配置 hugo.toml 关键配置项：\n配置项 说明 示例 baseURL GitHub Pages 地址 https://用户名.github.io languageCode 语言代码 zh-cn title 博客标题 技术笔记 theme 主题名 PaperMod 完整配置示例：\nbaseURL = 'https://doublecloud999.github.io' languageCode = 'zh-cn' title = '技术笔记' theme = 'PaperMod' [params] author = 'doublecloud999' description = '记录技术学习过程' defaultTheme = 'auto' [params.profileMode] enabled = true title = \"你好\" subtitle = \"记录技术学习过程\" [[menu.main]] name = '首页' url = '/' weight = 10 [[menu.main]] name = '文章' url = '/posts/' weight = 20 [[menu.main]] name = '标签' url = '/tags/' weight = 30 踩坑记录：baseURL 初始默认是 https://example.com，必须改成你的真实地址，否则所有链接都会跳转到 example.com\n2.4 创建文章 方式一：命令行创建（自动生成 Front Matter）\nhugo new content posts/文章标题.md 方式二：手动创建\n在 VS Code 中右键 content/posts 文件夹 → 新建文件 → 输入 文章标题.md\n文章格式：\n--- title: \"文章标题\" date: 2026-07-10T13:51:00+08:00 draft: false --- 文章内容 踩坑记录：\nFront Matter 格式必须用 --- 包裹 draft 必须设为 false，否则文章不显示 不能有多套 Front Matter（如同时有 +++ 和 ---） 三、GitHub Pages 部署 3.1 创建仓库 仓库名必须是：用户名.github.io（如 doublecloud999.github.io） 必须是 Public 3.2 配置 Git git config --global user.email \"你的邮箱\" git config --global user.name \"你的名字\" 3.3 推送代码 git remote add origin https://github.com/用户名/用户名.github.io.git git add . git commit -m \"init blog\" git branch -M main git push -u origin main 踩坑记录：GitHub 已不支持密码验证，必须用 Personal Access Token\n3.4 生成 Token GitHub 右上角头像 → Settings 左侧最下方 → Developer settings Personal access tokens → Tokens (classic) 点击 Generate new token (classic) Note 填 blog deploy Expiration 选 No expiration（永不过期） 勾选 repo（全部）和 workflow 点击 Generate token 复制 Token（只显示一次） 3.5 用 Token 推送 git remote set-url origin https://用户名:Token@github.com/用户名/用户名.github.io.git git push --set-upstream origin main 四、GitHub Actions 自动部署 4.1 创建 deploy.yml 路径：.github/workflows/deploy.yml\n踩坑记录：文件夹名必须是 .github（前面有点），不是 github\n最终目录结构：\nblog/ ├── .github/ │ └── workflows/ │ └── deploy.yml ├── archetypes/ ├── content/ │ └── posts/ │ └── hello_world.md ├── themes/ │ └── PaperMod/ ├── hugo.toml └── ... 4.2 deploy.yml 内容 核心踩坑：对于 username.github.io 仓库，必须用 GitHub 官方部署方式，不能用推送到 gh-pages 分支的方式\nname: Deploy Hugo on: push: branches: [main] permissions: contents: read pages: write id-token: write concurrency: group: \"pages\" cancel-in-progress: false jobs: build: runs-on: ubuntu-latest steps: - uses: actions/checkout@v4 with: submodules: true fetch-depth: 0 - name: Setup Hugo uses: peaceiris/actions-hugo@v3 with: hugo-version: 'latest' extended: true - name: Build run: hugo --minify - name: Upload artifact uses: actions/upload-pages-artifact@v3 with: path: ./public deploy: environment: name: github-pages url: ${{ steps.deployment.outputs.page_url }} runs-on: ubuntu-latest needs: build steps: - name: Deploy to GitHub Pages id: deployment uses: actions/deploy-pages@v4 为什么不能用 peaceiris/actions-gh-pages： 对于 username.github.io 这种特殊仓库名，GitHub 会自动启用内置的 pages-build-deployment 工作流，该工作流无法禁用。如果使用推送到 gh-pages 分支的方式，会与内置工作流冲突，导致部署被覆盖。\n4.3 配置 GitHub Pages 仓库页面 → Settings → Pages Source 选择 GitHub Actions 点击 Save 4.4 配置 Actions 权限 仓库页面 → Settings → Actions → General 往下滚动到 Workflow permissions 选择 Read and write permissions 勾选 Allow GitHub Actions to create and approve pull requests 点击 Save 五、网络问题处理 5.1 Git 走代理 git config --global http.proxy http://127.0.0.1:代理端口 git config --global https.proxy http://127.0.0.1:代理端口 常见代理端口：\nClash：7890 你的梯子：33210（HTTP）/ 33211（SOCKS5） 5.2 取消代理 推送完成后可以取消：\ngit config --global --unset http.proxy git config --global --unset https.proxy 六、常见错误及解决 错误信息 原因 解决方案 LF will be replaced by CRLF Windows 和 Linux 换行符不同 只是警告，忽略即可 Author identity unknown Git 未配置用户名和邮箱 git config --global user.email 和 user.name Connection was reset 网络或代理问题 配置 Git 代理或检查梯子 src refspec main does not match any 没有提交记录 先 git commit 再推送 ! [rejected] main -\u003e main (fetch first) 远程有本地没有的更改 先 git pull origin main 再 git push 打开 vim 编辑器 git pull 需要合并消息 按 Esc，输入 :wq，回车 文章 404 content 为空或 draft=true 创建文章，确保 draft: false 文章列表为空 Front Matter 格式错误 只保留一套 ---，draft 设为 false 跳转到 example.com baseURL 未修改 hugo.toml 中改为真实地址 Actions 权限不足 未开启写入权限 Settings → Actions → Read and write permissions Invalid username or token 密码验证已禁用 使用 Personal Access Token Permission denied to github-actions[bot] Actions 权限不足 开启 Read and write permissions 七、后续更新博客流程 7.1 写新文章 方式一（命令行）：\nhugo new content posts/文章标题.md 方式二（手动）：\nVS Code 中右键 content/posts → 新建文件 → 输入 文章标题.md\n7.2 编辑内容 打开文件，在 --- 下方写 Markdown 内容。\n7.3 本地预览（可选） hugo server -D 浏览器访问 http://localhost:1313\n7.4 推送到 GitHub git pull origin main git add . git commit -m \"add: 文章标题\" git push 7.5 等待部署 等 2-3 分钟，GitHub Actions 自动构建并部署。\n八、核心踩坑总结 username.github.io 是特殊仓库：GitHub 会自动启用内置 pages-build-deployment 工作流，无法禁用 必须用官方部署方式：使用 actions/deploy-pages，不能用推送到 gh-pages 分支的方式 baseURL 必须正确：改成 https://用户名.github.io，不能是 example.com 文章 draft 必须 false：否则 Hugo 不显示 Front Matter 格式正确：用 --- 包裹，不能有多套 GitHub 不支持密码验证：必须用 Token，且需要 repo + workflow 权限 推送前先 pull：避免远程冲突 .github 文件夹名：前面有点，不是 github Actions 权限要开启：Read and write permissions 网络问题配代理：Git 不走系统代理，需要单独配置 九、博客地址 部署成功后访问：\nhttps://doublecloud999.github.io 整理时间：2026-07-10\n","wordCount":"727","inLanguage":"en","datePublished":"2026-07-09T14:40:30+08:00","dateModified":"2026-07-09T14:40:30+08:00","author":{"@type":"Person","name":"doublecloud999"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://doublecloud999.github.io/posts/hello_world/"},"publisher":{"@type":"Organization","name":"技术笔记","logo":{"@type":"ImageObject","url":"https://doublecloud999.github.io/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=header-nav><div class=logo><a href=https://doublecloud999.github.io/ accesskey=h title="技术笔记 (Alt + H)">技术笔记</a><div class=logo-switches><button id=theme-toggle class=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg class="moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg class="sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu class=menu><li><a href=https://doublecloud999.github.io/ title=首页><span>首页</span></a></li><li><a href=https://doublecloud999.github.io/posts/ title=文章><span>文章</span></a></li><li><a href=https://doublecloud999.github.io/categories/ title=分类><span>分类</span></a></li><li><a href=https://doublecloud999.github.io/tags/ title=标签><span>标签</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><nav class=breadcrumbs role=navigation aria-label=Breadcrumb><a href=/>Home</a>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"/></svg>
+<a href=/posts/>Posts</a>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"/></svg></nav><h1 class="post-title entry-hint-parent">blog 1,自建博客网站</h1><div class=post-meta><span title='2026-07-09 14:40:30 +0800 CST'>July 9, 2026</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>727 words</span>&nbsp;·&nbsp;<span>doublecloud999</span></div></header><details class=toc><summary accesskey=c title="(Alt + C)"><span class=title>Table of Contents</span></summary><div class=inner><ul><li><a href=#%e5%bb%ba%e7%ab%8b%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%e7%bd%91%e7%ab%99hugo--github-pages%e5%ae%8c%e6%95%b4%e7%9f%a5%e8%af%86%e6%95%b4%e7%90%86 aria-label="建立个人博客网站（Hugo + GitHub Pages）完整知识整理">建立个人博客网站（Hugo + GitHub Pages）完整知识整理</a><ul><li><a href=#%e4%b8%80%e5%89%8d%e7%bd%ae%e5%87%86%e5%a4%87 aria-label=一、前置准备>一、前置准备</a></li><li><a href=#%e4%ba%8chugo-%e5%8d%9a%e5%ae%a2%e6%90%ad%e5%bb%ba%e6%ad%a5%e9%aa%a4 aria-label="二、Hugo 博客搭建步骤">二、Hugo 博客搭建步骤</a><ul><li><a href=#21-%e5%88%9b%e5%bb%ba%e5%8d%9a%e5%ae%a2%e7%ab%99%e7%82%b9 aria-label="2.1 创建博客站点">2.1 创建博客站点</a></li><li><a href=#22-%e5%ae%89%e8%a3%85%e4%b8%bb%e9%a2%98 aria-label="2.2 安装主题">2.2 安装主题</a></li><li><a href=#23-%e9%85%8d%e7%bd%ae-hugotoml aria-label="2.3 配置 hugo.toml">2.3 配置 hugo.toml</a></li><li><a href=#24-%e5%88%9b%e5%bb%ba%e6%96%87%e7%ab%a0 aria-label="2.4 创建文章">2.4 创建文章</a></li></ul></li><li><a href=#%e4%b8%89github-pages-%e9%83%a8%e7%bd%b2 aria-label="三、GitHub Pages 部署">三、GitHub Pages 部署</a><ul><li><a href=#31-%e5%88%9b%e5%bb%ba%e4%bb%93%e5%ba%93 aria-label="3.1 创建仓库">3.1 创建仓库</a></li><li><a href=#32-%e9%85%8d%e7%bd%ae-git aria-label="3.2 配置 Git">3.2 配置 Git</a></li><li><a href=#33-%e6%8e%a8%e9%80%81%e4%bb%a3%e7%a0%81 aria-label="3.3 推送代码">3.3 推送代码</a></li><li><a href=#34-%e7%94%9f%e6%88%90-token aria-label="3.4 生成 Token">3.4 生成 Token</a></li><li><a href=#35-%e7%94%a8-token-%e6%8e%a8%e9%80%81 aria-label="3.5 用 Token 推送">3.5 用 Token 推送</a></li></ul></li><li><a href=#%e5%9b%9bgithub-actions-%e8%87%aa%e5%8a%a8%e9%83%a8%e7%bd%b2 aria-label="四、GitHub Actions 自动部署">四、GitHub Actions 自动部署</a><ul><li><a href=#41-%e5%88%9b%e5%bb%ba-deployyml aria-label="4.1 创建 deploy.yml">4.1 创建 deploy.yml</a></li><li><a href=#42-deployyml-%e5%86%85%e5%ae%b9 aria-label="4.2 deploy.yml 内容">4.2 deploy.yml 内容</a></li><li><a href=#43-%e9%85%8d%e7%bd%ae-github-pages aria-label="4.3 配置 GitHub Pages">4.3 配置 GitHub Pages</a></li><li><a href=#44-%e9%85%8d%e7%bd%ae-actions-%e6%9d%83%e9%99%90 aria-label="4.4 配置 Actions 权限">4.4 配置 Actions 权限</a></li></ul></li><li><a href=#%e4%ba%94%e7%bd%91%e7%bb%9c%e9%97%ae%e9%a2%98%e5%a4%84%e7%90%86 aria-label=五、网络问题处理>五、网络问题处理</a><ul><li><a href=#51-git-%e8%b5%b0%e4%bb%a3%e7%90%86 aria-label="5.1 Git 走代理">5.1 Git 走代理</a></li><li><a href=#52-%e5%8f%96%e6%b6%88%e4%bb%a3%e7%90%86 aria-label="5.2 取消代理">5.2 取消代理</a></li></ul></li><li><a href=#%e5%85%ad%e5%b8%b8%e8%a7%81%e9%94%99%e8%af%af%e5%8f%8a%e8%a7%a3%e5%86%b3 aria-label=六、常见错误及解决>六、常见错误及解决</a></li><li><a href=#%e4%b8%83%e5%90%8e%e7%bb%ad%e6%9b%b4%e6%96%b0%e5%8d%9a%e5%ae%a2%e6%b5%81%e7%a8%8b aria-label=七、后续更新博客流程>七、后续更新博客流程</a><ul><li><a href=#71-%e5%86%99%e6%96%b0%e6%96%87%e7%ab%a0 aria-label="7.1 写新文章">7.1 写新文章</a></li><li><a href=#72-%e7%bc%96%e8%be%91%e5%86%85%e5%ae%b9 aria-label="7.2 编辑内容">7.2 编辑内容</a></li><li><a href=#73-%e6%9c%ac%e5%9c%b0%e9%a2%84%e8%a7%88%e5%8f%af%e9%80%89 aria-label="7.3 本地预览（可选）">7.3 本地预览（可选）</a></li><li><a href=#74-%e6%8e%a8%e9%80%81%e5%88%b0-github aria-label="7.4 推送到 GitHub">7.4 推送到 GitHub</a></li><li><a href=#75-%e7%ad%89%e5%be%85%e9%83%a8%e7%bd%b2 aria-label="7.5 等待部署">7.5 等待部署</a></li></ul></li><li><a href=#%e5%85%ab%e6%a0%b8%e5%bf%83%e8%b8%a9%e5%9d%91%e6%80%bb%e7%bb%93 aria-label=八、核心踩坑总结>八、核心踩坑总结</a></li><li><a href=#%e4%b9%9d%e5%8d%9a%e5%ae%a2%e5%9c%b0%e5%9d%80 aria-label=九、博客地址>九、博客地址</a></li></ul></li></ul></div></details><div class="post-content md-content"><p>2026.7.9</p><p>第一篇博客</p><h1 id=建立个人博客网站hugo--github-pages完整知识整理>建立个人博客网站（Hugo + GitHub Pages）完整知识整理<a hidden class=anchor aria-hidden=true href=#建立个人博客网站hugo--github-pages完整知识整理>#</a></h1><blockquote><p>基于实际操作经验整理，包含所有踩坑记录和解决方案</p></blockquote><hr><h2 id=一前置准备>一、前置准备<a hidden class=anchor aria-hidden=true href=#一前置准备>#</a></h2><ol><li>安装 Hugo（extended 版本）</li><li>安装 Git</li><li>注册 GitHub 账号</li><li>安装 VS Code</li></ol><hr><h2 id=二hugo-博客搭建步骤>二、Hugo 博客搭建步骤<a hidden class=anchor aria-hidden=true href=#二hugo-博客搭建步骤>#</a></h2><h3 id=21-创建博客站点>2.1 创建博客站点<a hidden class=anchor aria-hidden=true href=#21-创建博客站点>#</a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=nb>cd</span> 你想放博客的目录
+</span></span><span class=line><span class=cl>hugo new site 博客文件夹名
+</span></span><span class=line><span class=cl><span class=nb>cd</span> 博客文件夹名
+</span></span><span class=line><span class=cl>git init
+</span></span></code></pre></div><h3 id=22-安装主题>2.2 安装主题<a hidden class=anchor aria-hidden=true href=#22-安装主题>#</a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>git submodule add --depth<span class=o>=</span><span class=m>1</span> https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+</span></span><span class=line><span class=cl>git submodule update --init --recursive
+</span></span></code></pre></div><h3 id=23-配置-hugotoml>2.3 配置 hugo.toml<a hidden class=anchor aria-hidden=true href=#23-配置-hugotoml>#</a></h3><p>关键配置项：</p><table><thead><tr><th>配置项</th><th>说明</th><th>示例</th></tr></thead><tbody><tr><td>baseURL</td><td>GitHub Pages 地址</td><td><code>https://用户名.github.io</code></td></tr><tr><td>languageCode</td><td>语言代码</td><td><code>zh-cn</code></td></tr><tr><td>title</td><td>博客标题</td><td><code>技术笔记</code></td></tr><tr><td>theme</td><td>主题名</td><td><code>PaperMod</code></td></tr></tbody></table><p>完整配置示例：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-toml data-lang=toml><span class=line><span class=cl><span class=nx>baseURL</span> <span class=p>=</span> <span class=s1>&#39;https://doublecloud999.github.io&#39;</span>
+</span></span><span class=line><span class=cl><span class=nx>languageCode</span> <span class=p>=</span> <span class=s1>&#39;zh-cn&#39;</span>
+</span></span><span class=line><span class=cl><span class=nx>title</span> <span class=p>=</span> <span class=s1>&#39;技术笔记&#39;</span>
+</span></span><span class=line><span class=cl><span class=nx>theme</span> <span class=p>=</span> <span class=s1>&#39;PaperMod&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=nx>params</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=nx>author</span> <span class=p>=</span> <span class=s1>&#39;doublecloud999&#39;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>description</span> <span class=p>=</span> <span class=s1>&#39;记录技术学习过程&#39;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>defaultTheme</span> <span class=p>=</span> <span class=s1>&#39;auto&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>[</span><span class=nx>params</span><span class=p>.</span><span class=nx>profileMode</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=nx>enabled</span> <span class=p>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>  <span class=nx>title</span> <span class=p>=</span> <span class=s2>&#34;你好&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>subtitle</span> <span class=p>=</span> <span class=s2>&#34;记录技术学习过程&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>[[</span><span class=nx>menu</span><span class=p>.</span><span class=nx>main</span><span class=p>]]</span>
+</span></span><span class=line><span class=cl>  <span class=nx>name</span> <span class=p>=</span> <span class=s1>&#39;首页&#39;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>url</span> <span class=p>=</span> <span class=s1>&#39;/&#39;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>weight</span> <span class=p>=</span> <span class=mi>10</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>[[</span><span class=nx>menu</span><span class=p>.</span><span class=nx>main</span><span class=p>]]</span>
+</span></span><span class=line><span class=cl>  <span class=nx>name</span> <span class=p>=</span> <span class=s1>&#39;文章&#39;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>url</span> <span class=p>=</span> <span class=s1>&#39;/posts/&#39;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>weight</span> <span class=p>=</span> <span class=mi>20</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>[[</span><span class=nx>menu</span><span class=p>.</span><span class=nx>main</span><span class=p>]]</span>
+</span></span><span class=line><span class=cl>  <span class=nx>name</span> <span class=p>=</span> <span class=s1>&#39;标签&#39;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>url</span> <span class=p>=</span> <span class=s1>&#39;/tags/&#39;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>weight</span> <span class=p>=</span> <span class=mi>30</span>
+</span></span></code></pre></div><blockquote><p><strong>踩坑记录</strong>：baseURL 初始默认是 <code>https://example.com</code>，必须改成你的真实地址，否则所有链接都会跳转到 example.com</p></blockquote><h3 id=24-创建文章>2.4 创建文章<a hidden class=anchor aria-hidden=true href=#24-创建文章>#</a></h3><p>方式一：命令行创建（自动生成 Front Matter）</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hugo new content posts/文章标题.md
+</span></span></code></pre></div><p>方式二：手动创建</p><p>在 VS Code 中右键 <code>content/posts</code> 文件夹 → 新建文件 → 输入 <code>文章标题.md</code></p><p>文章格式：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown><span class=line><span class=cl>---
+</span></span><span class=line><span class=cl>title: &#34;文章标题&#34;
+</span></span><span class=line><span class=cl>date: 2026-07-10T13:51:00+08:00
+</span></span><span class=line><span class=cl>draft: false
+</span></span><span class=line><span class=cl>---
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>文章内容
+</span></span></code></pre></div><blockquote><p><strong>踩坑记录</strong>：</p><ol><li>Front Matter 格式必须用 <code>---</code> 包裹</li><li><code>draft</code> 必须设为 <code>false</code>，否则文章不显示</li><li>不能有多套 Front Matter（如同时有 <code>+++</code> 和 <code>---</code>）</li></ol></blockquote><hr><h2 id=三github-pages-部署>三、GitHub Pages 部署<a hidden class=anchor aria-hidden=true href=#三github-pages-部署>#</a></h2><h3 id=31-创建仓库>3.1 创建仓库<a hidden class=anchor aria-hidden=true href=#31-创建仓库>#</a></h3><ul><li>仓库名必须是：<code>用户名.github.io</code>（如 <code>doublecloud999.github.io</code>）</li><li>必须是 <strong>Public</strong></li></ul><h3 id=32-配置-git>3.2 配置 Git<a hidden class=anchor aria-hidden=true href=#32-配置-git>#</a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>git config --global user.email <span class=s2>&#34;你的邮箱&#34;</span>
+</span></span><span class=line><span class=cl>git config --global user.name <span class=s2>&#34;你的名字&#34;</span>
+</span></span></code></pre></div><h3 id=33-推送代码>3.3 推送代码<a hidden class=anchor aria-hidden=true href=#33-推送代码>#</a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>git remote add origin https://github.com/用户名/用户名.github.io.git
+</span></span><span class=line><span class=cl>git add .
+</span></span><span class=line><span class=cl>git commit -m <span class=s2>&#34;init blog&#34;</span>
+</span></span><span class=line><span class=cl>git branch -M main
+</span></span><span class=line><span class=cl>git push -u origin main
+</span></span></code></pre></div><blockquote><p><strong>踩坑记录</strong>：GitHub 已不支持密码验证，必须用 Personal Access Token</p></blockquote><h3 id=34-生成-token>3.4 生成 Token<a hidden class=anchor aria-hidden=true href=#34-生成-token>#</a></h3><ol><li>GitHub 右上角头像 → <strong>Settings</strong></li><li>左侧最下方 → <strong>Developer settings</strong></li><li><strong>Personal access tokens</strong> → <strong>Tokens (classic)</strong></li><li>点击 <strong>Generate new token (classic)</strong></li><li>Note 填 <code>blog deploy</code></li><li>Expiration 选 <strong>No expiration</strong>（永不过期）</li><li>勾选 <strong>repo</strong>（全部）和 <strong>workflow</strong></li><li>点击 <strong>Generate token</strong></li><li><strong>复制 Token</strong>（只显示一次）</li></ol><h3 id=35-用-token-推送>3.5 用 Token 推送<a hidden class=anchor aria-hidden=true href=#35-用-token-推送>#</a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>git remote set-url origin https://用户名:Token@github.com/用户名/用户名.github.io.git
+</span></span><span class=line><span class=cl>git push --set-upstream origin main
+</span></span></code></pre></div><hr><h2 id=四github-actions-自动部署>四、GitHub Actions 自动部署<a hidden class=anchor aria-hidden=true href=#四github-actions-自动部署>#</a></h2><h3 id=41-创建-deployyml>4.1 创建 deploy.yml<a hidden class=anchor aria-hidden=true href=#41-创建-deployyml>#</a></h3><p>路径：<code>.github/workflows/deploy.yml</code></p><blockquote><p><strong>踩坑记录</strong>：文件夹名必须是 <code>.github</code>（前面有点），不是 <code>github</code></p></blockquote><p>最终目录结构：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>blog/
+</span></span><span class=line><span class=cl>├── .github/
+</span></span><span class=line><span class=cl>│   └── workflows/
+</span></span><span class=line><span class=cl>│       └── deploy.yml
+</span></span><span class=line><span class=cl>├── archetypes/
+</span></span><span class=line><span class=cl>├── content/
+</span></span><span class=line><span class=cl>│   └── posts/
+</span></span><span class=line><span class=cl>│       └── hello_world.md
+</span></span><span class=line><span class=cl>├── themes/
+</span></span><span class=line><span class=cl>│   └── PaperMod/
+</span></span><span class=line><span class=cl>├── hugo.toml
+</span></span><span class=line><span class=cl>└── ...
+</span></span></code></pre></div><h3 id=42-deployyml-内容>4.2 deploy.yml 内容<a hidden class=anchor aria-hidden=true href=#42-deployyml-内容>#</a></h3><blockquote><p><strong>核心踩坑</strong>：对于 <code>username.github.io</code> 仓库，必须用 GitHub 官方部署方式，不能用推送到 <code>gh-pages</code> 分支的方式</p></blockquote><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Deploy Hugo</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=nt>on</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>push</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>branches</span><span class=p>:</span><span class=w> </span><span class=p>[</span><span class=l>main]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=nt>permissions</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>contents</span><span class=p>:</span><span class=w> </span><span class=l>read</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>pages</span><span class=p>:</span><span class=w> </span><span class=l>write</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>id-token</span><span class=p>:</span><span class=w> </span><span class=l>write</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=nt>concurrency</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>group</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;pages&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>cancel-in-progress</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=nt>jobs</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>build</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>runs-on</span><span class=p>:</span><span class=w> </span><span class=l>ubuntu-latest</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>steps</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>actions/checkout@v4</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>with</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>          </span><span class=nt>submodules</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>          </span><span class=nt>fetch-depth</span><span class=p>:</span><span class=w> </span><span class=m>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Setup Hugo</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>peaceiris/actions-hugo@v3</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>with</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>          </span><span class=nt>hugo-version</span><span class=p>:</span><span class=w> </span><span class=s1>&#39;latest&#39;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>          </span><span class=nt>extended</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Build</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=l>hugo --minify</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Upload artifact</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>actions/upload-pages-artifact@v3</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>with</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>          </span><span class=nt>path</span><span class=p>:</span><span class=w> </span><span class=l>./public</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>deploy</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>environment</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>github-pages</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>url</span><span class=p>:</span><span class=w> </span><span class=l>${{ steps.deployment.outputs.page_url }}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>runs-on</span><span class=p>:</span><span class=w> </span><span class=l>ubuntu-latest</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>needs</span><span class=p>:</span><span class=w> </span><span class=l>build</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>steps</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Deploy to GitHub Pages</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>id</span><span class=p>:</span><span class=w> </span><span class=l>deployment</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>actions/deploy-pages@v4</span><span class=w>
+</span></span></span></code></pre></div><blockquote><p><strong>为什么不能用 <code>peaceiris/actions-gh-pages</code></strong>：
+对于 <code>username.github.io</code> 这种特殊仓库名，GitHub 会自动启用内置的 <code>pages-build-deployment</code> 工作流，该工作流无法禁用。如果使用推送到 <code>gh-pages</code> 分支的方式，会与内置工作流冲突，导致部署被覆盖。</p></blockquote><h3 id=43-配置-github-pages>4.3 配置 GitHub Pages<a hidden class=anchor aria-hidden=true href=#43-配置-github-pages>#</a></h3><ol><li>仓库页面 → <strong>Settings</strong> → <strong>Pages</strong></li><li><code>Source</code> 选择 <strong>GitHub Actions</strong></li><li>点击 <strong>Save</strong></li></ol><h3 id=44-配置-actions-权限>4.4 配置 Actions 权限<a hidden class=anchor aria-hidden=true href=#44-配置-actions-权限>#</a></h3><ol><li>仓库页面 → <strong>Settings</strong> → <strong>Actions</strong> → <strong>General</strong></li><li>往下滚动到 <strong>Workflow permissions</strong></li><li>选择 <strong>Read and write permissions</strong></li><li>勾选 <strong>Allow GitHub Actions to create and approve pull requests</strong></li><li>点击 <strong>Save</strong></li></ol><hr><h2 id=五网络问题处理>五、网络问题处理<a hidden class=anchor aria-hidden=true href=#五网络问题处理>#</a></h2><h3 id=51-git-走代理>5.1 Git 走代理<a hidden class=anchor aria-hidden=true href=#51-git-走代理>#</a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>git config --global http.proxy http://127.0.0.1:代理端口
+</span></span><span class=line><span class=cl>git config --global https.proxy http://127.0.0.1:代理端口
+</span></span></code></pre></div><p>常见代理端口：</p><ul><li>Clash：7890</li><li>你的梯子：33210（HTTP）/ 33211（SOCKS5）</li></ul><h3 id=52-取消代理>5.2 取消代理<a hidden class=anchor aria-hidden=true href=#52-取消代理>#</a></h3><p>推送完成后可以取消：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>git config --global --unset http.proxy
+</span></span><span class=line><span class=cl>git config --global --unset https.proxy
+</span></span></code></pre></div><hr><h2 id=六常见错误及解决>六、常见错误及解决<a hidden class=anchor aria-hidden=true href=#六常见错误及解决>#</a></h2><table><thead><tr><th>错误信息</th><th>原因</th><th>解决方案</th></tr></thead><tbody><tr><td><code>LF will be replaced by CRLF</code></td><td>Windows 和 Linux 换行符不同</td><td>只是警告，忽略即可</td></tr><tr><td><code>Author identity unknown</code></td><td>Git 未配置用户名和邮箱</td><td><code>git config --global user.email</code> 和 <code>user.name</code></td></tr><tr><td><code>Connection was reset</code></td><td>网络或代理问题</td><td>配置 Git 代理或检查梯子</td></tr><tr><td><code>src refspec main does not match any</code></td><td>没有提交记录</td><td>先 <code>git commit</code> 再推送</td></tr><tr><td><code>! [rejected] main -> main (fetch first)</code></td><td>远程有本地没有的更改</td><td>先 <code>git pull origin main</code> 再 <code>git push</code></td></tr><tr><td>打开 vim 编辑器</td><td><code>git pull</code> 需要合并消息</td><td>按 <code>Esc</code>，输入 <code>:wq</code>，回车</td></tr><tr><td>文章 404</td><td>content 为空或 draft=true</td><td>创建文章，确保 <code>draft: false</code></td></tr><tr><td>文章列表为空</td><td>Front Matter 格式错误</td><td>只保留一套 <code>---</code>，draft 设为 false</td></tr><tr><td>跳转到 example.com</td><td>baseURL 未修改</td><td><code>hugo.toml</code> 中改为真实地址</td></tr><tr><td>Actions 权限不足</td><td>未开启写入权限</td><td>Settings → Actions → Read and write permissions</td></tr><tr><td><code>Invalid username or token</code></td><td>密码验证已禁用</td><td>使用 Personal Access Token</td></tr><tr><td><code>Permission denied to github-actions[bot]</code></td><td>Actions 权限不足</td><td>开启 Read and write permissions</td></tr></tbody></table><hr><h2 id=七后续更新博客流程>七、后续更新博客流程<a hidden class=anchor aria-hidden=true href=#七后续更新博客流程>#</a></h2><h3 id=71-写新文章>7.1 写新文章<a hidden class=anchor aria-hidden=true href=#71-写新文章>#</a></h3><p>方式一（命令行）：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hugo new content posts/文章标题.md
+</span></span></code></pre></div><p>方式二（手动）：</p><p>VS Code 中右键 <code>content/posts</code> → 新建文件 → 输入 <code>文章标题.md</code></p><h3 id=72-编辑内容>7.2 编辑内容<a hidden class=anchor aria-hidden=true href=#72-编辑内容>#</a></h3><p>打开文件，在 <code>---</code> 下方写 Markdown 内容。</p><h3 id=73-本地预览可选>7.3 本地预览（可选）<a hidden class=anchor aria-hidden=true href=#73-本地预览可选>#</a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>hugo server -D
+</span></span></code></pre></div><p>浏览器访问 <code>http://localhost:1313</code></p><h3 id=74-推送到-github>7.4 推送到 GitHub<a hidden class=anchor aria-hidden=true href=#74-推送到-github>#</a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>git pull origin main
+</span></span><span class=line><span class=cl>git add .
+</span></span><span class=line><span class=cl>git commit -m <span class=s2>&#34;add: 文章标题&#34;</span>
+</span></span><span class=line><span class=cl>git push
+</span></span></code></pre></div><h3 id=75-等待部署>7.5 等待部署<a hidden class=anchor aria-hidden=true href=#75-等待部署>#</a></h3><p>等 2-3 分钟，GitHub Actions 自动构建并部署。</p><hr><h2 id=八核心踩坑总结>八、核心踩坑总结<a hidden class=anchor aria-hidden=true href=#八核心踩坑总结>#</a></h2><ol><li><strong><code>username.github.io</code> 是特殊仓库</strong>：GitHub 会自动启用内置 <code>pages-build-deployment</code> 工作流，无法禁用</li><li><strong>必须用官方部署方式</strong>：使用 <code>actions/deploy-pages</code>，不能用推送到 <code>gh-pages</code> 分支的方式</li><li><strong>baseURL 必须正确</strong>：改成 <code>https://用户名.github.io</code>，不能是 example.com</li><li><strong>文章 draft 必须 false</strong>：否则 Hugo 不显示</li><li><strong>Front Matter 格式正确</strong>：用 <code>---</code> 包裹，不能有多套</li><li><strong>GitHub 不支持密码验证</strong>：必须用 Token，且需要 <code>repo</code> + <code>workflow</code> 权限</li><li><strong>推送前先 pull</strong>：避免远程冲突</li><li><strong>.github 文件夹名</strong>：前面有点，不是 <code>github</code></li><li><strong>Actions 权限要开启</strong>：Read and write permissions</li><li><strong>网络问题配代理</strong>：Git 不走系统代理，需要单独配置</li></ol><hr><h2 id=九博客地址>九、博客地址<a hidden class=anchor aria-hidden=true href=#九博客地址>#</a></h2><p>部署成功后访问：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>https://doublecloud999.github.io
+</span></span></code></pre></div><hr><p><em>整理时间：2026-07-10</em></p></div><footer class=post-footer><ul class=post-tags></ul><nav class=paginav><a class=prev href=https://doublecloud999.github.io/posts/java%E7%AC%94%E8%AE%B0/><span class=title>« Prev</span>
+<span>Java 基础笔记</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2026 <a href=https://doublecloud999.github.io/>技术笔记</a></span> ·
+<span>Powered by
+<a href="https://gohugo.io/?utm_source=papermod" rel=noopener target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top id=top-link class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey=g><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up"><polyline points="17 11 12 6 7 11"/><polyline points="17 18 12 13 7 18"/></svg>
+</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var toplink=document.getElementById("top-link");window.onscroll=function(){const e=window.innerHeight;document.body.scrollTop>e||document.documentElement.scrollTop>e?toplink.classList.remove("hidden"):toplink.classList.add("hidden")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>

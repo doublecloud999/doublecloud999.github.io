@@ -1,40 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>技术笔记</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on 技术笔记</description>
-    <generator>Hugo</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Wed, 15 Jul 2026 22:20:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>算法笔记 01:数组</title>
-      <link>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E7%AF%871/</link>
-      <pubDate>Wed, 15 Jul 2026 22:20:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/%E7%AE%97%E6%B3%95%E7%AF%871/</guid>
-      <description>从静态数组的内存模型讲起,梳理数组的增删改查操作及其时间复杂度,并引出动态数组。</description>
-    </item>
-    <item>
-      <title>Java 基础笔记</title>
-      <link>http://localhost:1313/posts/java%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Wed, 15 Jul 2026 22:13:28 +0800</pubDate>
-      <guid>http://localhost:1313/posts/java%E7%AC%94%E8%AE%B0/</guid>
-      <description>Java 平台无关性、加载与执行机制、环境变量、基础语法、数据类型、流程控制,以及面向对象与泛型入门。</description>
-    </item>
-    <item>
-      <title>blog 1,自建博客网站</title>
-      <link>http://localhost:1313/posts/hello_world/</link>
-      <pubDate>Thu, 09 Jul 2026 14:40:30 +0800</pubDate>
-      <guid>http://localhost:1313/posts/hello_world/</guid>
-      <description>&lt;p&gt;2026.7.9&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>技术笔记</title><link>https://doublecloud999.github.io/</link><description>Recent content on 技术笔记</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 21 Sep 2026 21:49:02 +0800</lastBuildDate><atom:link href="https://doublecloud999.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Java 细节拾遗:数组的声明与初始化</title><link>https://doublecloud999.github.io/posts/java-array-details/</link><pubDate>Mon, 21 Sep 2026 20:06:29 +0800</pubDate><guid>https://doublecloud999.github.io/posts/java-array-details/</guid><description>数组声明时可以不指定大小、数组长度为 0 与数组为 null 的区别,以及 return 时 new 对象、sc.close() 等容易忽略的细节。</description></item><item><title>Java 内部类:静态嵌套类与非静态内部类</title><link>https://doublecloud999.github.io/posts/java-inner-class/</link><pubDate>Mon, 21 Sep 2026 21:49:02 +0800</pubDate><guid>https://doublecloud999.github.io/posts/java-inner-class/</guid><description>静态嵌套类与非静态内部类的区别、各自的创建方式与常见错误写法,以及匿名内部类的概念。</description></item><item><title>Java 类与对象基础:this、包、访问权限与封装</title><link>https://doublecloud999.github.io/posts/java-class-object-basics/</link><pubDate>Mon, 21 Sep 2026 21:49:02 +0800</pubDate><guid>https://doublecloud999.github.io/posts/java-class-object-basics/</guid><description>this 关键字的作用与用法、package 与 import 的意义、类与成员的访问修饰符,以及封装的三条原则。</description></item><item><title>Java 方法重载与重写</title><link>https://doublecloud999.github.io/posts/java-overload-override/</link><pubDate>Mon, 21 Sep 2026 21:49:02 +0800</pubDate><guid>https://doublecloud999.github.io/posts/java-overload-override/</guid><description>方法重载(Overload)的三个条件、方法重写(Override)的三条硬性规则,以及 @Override 注解的作用。</description></item><item><title>Java 继承与 super</title><link>https://doublecloud999.github.io/posts/java-inheritance-super/</link><pubDate>Mon, 21 Sep 2026 21:49:02 +0800</pubDate><guid>https://doublecloud999.github.io/posts/java-inheritance-super/</guid><description>继承的意义与语法、super 访问父类成员变量/方法/构造方法的规则、向上转型,以及 super 的五个易错点。</description></item><item><title>Java static 关键字</title><link>https://doublecloud999.github.io/posts/java-static-keyword/</link><pubDate>Mon, 21 Sep 2026 21:49:02 +0800</pubDate><guid>https://doublecloud999.github.io/posts/java-static-keyword/</guid><description>static 的语义:属于类而不是对象、类加载阶段的初始化时机、静态方法不能访问非静态成员、静态代码块只执行一次。</description></item><item><title>Java 多态</title><link>https://doublecloud999.github.io/posts/java-polymorphism/</link><pubDate>Mon, 21 Sep 2026 21:49:02 +0800</pubDate><guid>https://doublecloud999.github.io/posts/java-polymorphism/</guid><description>多态的定义、编译时多态(方法重载)与运行时多态(方法重写)的区别、运行时多态成立的三个条件,以及哪些成员不参与多态。</description></item><item><title>Java 抽象类与接口</title><link>https://doublecloud999.github.io/posts/java-abstract-interface/</link><pubDate>Mon, 21 Sep 2026 21:49:02 +0800</pubDate><guid>https://doublecloud999.github.io/posts/java-abstract-interface/</guid><description>abstract 抽象类的修饰符限制、抽象方法的定义与实现规则、interface 接口的特性与多实现的解耦价值,以及抽象类与接口的异同和 default 方法冲突。</description></item><item><title>Java final、finally 与 finalize</title><link>https://doublecloud999.github.io/posts/java-final-finally-finalize/</link><pubDate>Mon, 21 Sep 2026 21:49:02 +0800</pubDate><guid>https://doublecloud999.github.io/posts/java-final-finally-finalize/</guid><description>final 修饰类/方法/变量的规则、finalize 为何被弃用,以及 finally 与 return 的返回值覆盖机制(基本类型与引用类型的差异)。</description></item><item><title>Java 字符串三兄弟:String、StringBuilder 与 StringBuffer</title><link>https://doublecloud999.github.io/posts/java-string-builder-buffer/</link><pubDate>Mon, 21 Sep 2026 21:49:02 +0800</pubDate><guid>https://doublecloud999.github.io/posts/java-string-builder-buffer/</guid><description>String 为何不可变、new String(&amp;#34;abc&amp;#34;) 创建几个对象、StringBuilder 的底层扩容机制与 I/O 优化,以及 StringBuilder 与 StringBuffer 的取舍。</description></item><item><title>Java 包装类型与自动装箱拆箱</title><link>https://doublecloud999.github.io/posts/java-wrapper-classes/</link><pubDate>Mon, 21 Sep 2026 21:49:02 +0800</pubDate><guid>https://doublecloud999.github.io/posts/java-wrapper-classes/</guid><description>四类八种包装类的对应关系、引用类型与值类型的差异、自动装箱与自动拆箱的底层实现(缓存机制与 valueOf),以及空指针、对象比较、性能开销三大重难点。</description></item><item><title>Java 异常处理</title><link>https://doublecloud999.github.io/posts/java-exception-handling/</link><pubDate>Mon, 21 Sep 2026 21:49:02 +0800</pubDate><guid>https://doublecloud999.github.io/posts/java-exception-handling/</guid><description>RuntimeException 与 CheckedException 的区别(结论、成因、底层原理与边界条件),以及 throw / throws / try-catch / try-finally 的核心语法。</description></item><item><title>Java 细节拾遗:super、静态绑定与字符串常量池</title><link>https://doublecloud999.github.io/posts/java-super-string-pool-notes/</link><pubDate>Mon, 21 Sep 2026 21:44:22 +0800</pubDate><guid>https://doublecloud999.github.io/posts/java-super-string-pool-notes/</guid><description>容易忘、需要反复看的 Java 细节:super 与 static 的绑定机制、构造方法中 super() 的自动插入规则、字符串常量池、== 与 equals 的区别、访问权限与接口 default。</description></item><item><title>Java 集合框架与 List</title><link>https://doublecloud999.github.io/posts/java-collections-list/</link><pubDate>Mon, 21 Sep 2026 20:06:39 +0800</pubDate><guid>https://doublecloud999.github.io/posts/java-collections-list/</guid><description>Java 集合框架的层次结构(Collection 与 Map),常用数据结构复习,以及 ArrayList 与 LinkedList 的底层实现和增删改查效率对比。</description></item><item><title>Java IO 与文件流</title><link>https://doublecloud999.github.io/posts/java-io-file-stream/</link><pubDate>Mon, 21 Sep 2026 20:07:04 +0800</pubDate><guid>https://doublecloud999.github.io/posts/java-io-file-stream/</guid><description>Java IO 基础:流的分类(方向 / 单位 / 功能)、字节流与字符流体系、节点流与过滤流的区别,以及算法题常用输入输出模板。</description></item><item><title>Java 多线程入门</title><link>https://doublecloud999.github.io/posts/java-thread-intro/</link><pubDate>Mon, 21 Sep 2026 20:05:07 +0800</pubDate><guid>https://doublecloud999.github.io/posts/java-thread-intro/</guid><description>进程与线程的区别、JDK / JRE / JVM 的包含关系、HotSpot 虚拟机与 JIT 即时编译,以及线程的创建方式。</description></item><item><title>算法笔记 01:数组</title><link>https://doublecloud999.github.io/posts/%E7%AE%97%E6%B3%95%E7%AF%871/</link><pubDate>Wed, 15 Jul 2026 22:20:00 +0800</pubDate><guid>https://doublecloud999.github.io/posts/%E7%AE%97%E6%B3%95%E7%AF%871/</guid><description>从静态数组的内存模型讲起,梳理数组的增删改查操作及其时间复杂度,并引出动态数组。</description></item><item><title>Java 基础笔记</title><link>https://doublecloud999.github.io/posts/java%E7%AC%94%E8%AE%B0/</link><pubDate>Wed, 15 Jul 2026 22:13:28 +0800</pubDate><guid>https://doublecloud999.github.io/posts/java%E7%AC%94%E8%AE%B0/</guid><description>Java 平台无关性、加载与执行机制、环境变量、基础语法、数据类型、流程控制,以及面向对象与泛型入门。</description></item><item><title>blog 1,自建博客网站</title><link>https://doublecloud999.github.io/posts/hello_world/</link><pubDate>Thu, 09 Jul 2026 14:40:30 +0800</pubDate><guid>https://doublecloud999.github.io/posts/hello_world/</guid><description>&lt;p&gt;2026.7.9&lt;/p&gt;
 &lt;p&gt;第一篇博客&lt;/p&gt;
-&lt;h1 id=&#34;建立个人博客网站hugo--github-pages完整知识整理&#34;&gt;建立个人博客网站（Hugo + GitHub Pages）完整知识整理&lt;/h1&gt;
+&lt;h1 id="建立个人博客网站hugo--github-pages完整知识整理"&gt;建立个人博客网站（Hugo + GitHub Pages）完整知识整理&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;基于实际操作经验整理，包含所有踩坑记录和解决方案&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;一前置准备&#34;&gt;一、前置准备&lt;/h2&gt;
+&lt;h2 id="一前置准备"&gt;一、前置准备&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;安装 Hugo（extended 版本）&lt;/li&gt;
 &lt;li&gt;安装 Git&lt;/li&gt;
@@ -42,80 +13,77 @@
 &lt;li&gt;安装 VS Code&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;二hugo-博客搭建步骤&#34;&gt;二、Hugo 博客搭建步骤&lt;/h2&gt;
-&lt;h3 id=&#34;21-创建博客站点&#34;&gt;2.1 创建博客站点&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; 你想放博客的目录
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo new site 博客文件夹名
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; 博客文件夹名
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git init
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;22-安装主题&#34;&gt;2.2 安装主题&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git submodule add --depth&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git submodule update --init --recursive
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;23-配置-hugotoml&#34;&gt;2.3 配置 hugo.toml&lt;/h3&gt;
+&lt;h2 id="二hugo-博客搭建步骤"&gt;二、Hugo 博客搭建步骤&lt;/h2&gt;
+&lt;h3 id="21-创建博客站点"&gt;2.1 创建博客站点&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; 你想放博客的目录
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;hugo new site 博客文件夹名
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; 博客文件夹名
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git init
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="22-安装主题"&gt;2.2 安装主题&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git submodule add --depth&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git submodule update --init --recursive
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="23-配置-hugotoml"&gt;2.3 配置 hugo.toml&lt;/h3&gt;
 &lt;p&gt;关键配置项：&lt;/p&gt;
 &lt;table&gt;
-	&lt;thead&gt;
-			&lt;tr&gt;
-					&lt;th&gt;配置项&lt;/th&gt;
-					&lt;th&gt;说明&lt;/th&gt;
-					&lt;th&gt;示例&lt;/th&gt;
-			&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
-			&lt;tr&gt;
-					&lt;td&gt;baseURL&lt;/td&gt;
-					&lt;td&gt;GitHub Pages 地址&lt;/td&gt;
-					&lt;td&gt;&lt;code&gt;https://用户名.github.io&lt;/code&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;languageCode&lt;/td&gt;
-					&lt;td&gt;语言代码&lt;/td&gt;
-					&lt;td&gt;&lt;code&gt;zh-cn&lt;/code&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;title&lt;/td&gt;
-					&lt;td&gt;博客标题&lt;/td&gt;
-					&lt;td&gt;&lt;code&gt;技术笔记&lt;/code&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;theme&lt;/td&gt;
-					&lt;td&gt;主题名&lt;/td&gt;
-					&lt;td&gt;&lt;code&gt;PaperMod&lt;/code&gt;&lt;/td&gt;
-			&lt;/tr&gt;
-	&lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;配置项&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;th&gt;示例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;baseURL&lt;/td&gt;
+&lt;td&gt;GitHub Pages 地址&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;https://用户名.github.io&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;languageCode&lt;/td&gt;
+&lt;td&gt;语言代码&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;zh-cn&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;title&lt;/td&gt;
+&lt;td&gt;博客标题&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;技术笔记&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;theme&lt;/td&gt;
+&lt;td&gt;主题名&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;PaperMod&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;完整配置示例：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;baseURL&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;https://doublecloud999.github.io&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;languageCode&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;zh-cn&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;title&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;技术笔记&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;theme&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;PaperMod&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;params&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;author&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;doublecloud999&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;description&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;记录技术学习过程&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;defaultTheme&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;auto&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;params&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;profileMode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;enabled&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;title&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;你好&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;subtitle&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;记录技术学习过程&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;menu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;首页&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;weight&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;menu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;文章&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/posts/&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;weight&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;menu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;标签&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/tags/&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;weight&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-toml" data-lang="toml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;baseURL&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https://doublecloud999.github.io&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;languageCode&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;zh-cn&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;title&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;技术笔记&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;theme&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;PaperMod&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;params&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;author&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;doublecloud999&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;description&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;记录技术学习过程&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;defaultTheme&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;auto&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;params&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;profileMode&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;enabled&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;title&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;你好&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;subtitle&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;记录技术学习过程&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="nx"&gt;menu&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;main&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;name&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;首页&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;url&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;weight&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="nx"&gt;menu&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;main&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;name&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;文章&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;url&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/posts/&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;weight&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="nx"&gt;menu&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;main&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;name&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;标签&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;url&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/tags/&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;weight&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;踩坑记录&lt;/strong&gt;：baseURL 初始默认是 &lt;code&gt;https://example.com&lt;/code&gt;，必须改成你的真实地址，否则所有链接都会跳转到 example.com&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;p&gt;&lt;strong&gt;踩坑记录&lt;/strong&gt;：baseURL 初始默认是 &lt;code&gt;https://example.com&lt;/code&gt;，必须改成你的真实地址，否则所有链接都会跳转到 example.com&lt;/p&gt;</description></item></channel></rss>
