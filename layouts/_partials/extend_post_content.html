@@ -1,0 +1,22 @@
+{{- /* ============================================================
+   文章底部：本分类（系列）目录，仿 JavaGuide 的侧边目录
+   按 weight 升序排列，当前篇高亮
+   ============================================================ */ -}}
+{{- $group := "" }}
+{{- with .Params.categories }}{{ $group = index . 0 }}{{ end }}
+{{- if $group }}
+  {{- $pages := where site.RegularPages "Params.categories" "intersect" (slice $group) }}
+  {{- $pages = sort $pages "Params.weight" "asc" }}
+  {{- if gt (len $pages) 1 }}
+  <div class="series-nav">
+    <p class="series-nav-title">本系列目录 · {{ $group }}（共 {{ len $pages }} 篇）</p>
+    <ol>
+      {{- range $pages }}
+      <li class="{{ if eq .RelPermalink $.RelPermalink }}is-current{{ end }}">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
+      {{- end }}
+    </ol>
+  </div>
+  {{- end }}
+{{- end }}

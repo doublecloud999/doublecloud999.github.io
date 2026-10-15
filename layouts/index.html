@@ -1,0 +1,57 @@
+{{- define "main" }}
+
+{{- $posts := where site.RegularPages "Section" "posts" }}
+{{- $sorted := sort $posts "Params.weight" "asc" }}
+
+<div class="jg-home">
+
+  <section class="jg-hero">
+    <h1 class="jg-hero-title">{{ site.Title }}</h1>
+    <p class="jg-hero-sub">{{ site.Params.description }}</p>
+    <div class="jg-hero-actions">
+      <a class="jg-btn jg-btn-primary" href="{{ "roadmap/" | absLangURL }}">学习路线</a>
+      <a class="jg-btn" href="{{ "archives/" | absLangURL }}">全部文章</a>
+      <a class="jg-btn" href="{{ "categories/" | absLangURL }}">分类</a>
+      <a class="jg-btn" href="{{ "tags/" | absLangURL }}">标签</a>
+    </div>
+    <p class="jg-hero-count">共收录 {{ len $posts }} 篇笔记</p>
+  </section>
+
+  <h2 class="jg-section-title">知识体系</h2>
+
+  <div class="jg-cards">
+    {{- range site.Params.sections }}
+    {{- $cat := .key }}
+    {{- $list := where $posts "Params.categories" "intersect" (slice $cat) }}
+    {{- $list = sort $list "Params.weight" "asc" }}
+    {{- if gt (len $list) 0 }}
+    <div class="jg-card">
+      <div class="jg-card-head">
+        <span class="jg-card-icon">{{ with .icon }}{{ . }}{{ else }}📘{{ end }}</span>
+        <span class="jg-card-name">{{ .name }}</span>
+        <span class="jg-card-count">{{ len $list }}</span>
+      </div>
+      <p class="jg-card-desc">{{ .desc }}</p>
+      <ul class="jg-card-list">
+        {{- range $list }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{- end }}
+      </ul>
+    </div>
+    {{- end }}
+    {{- end }}
+  </div>
+
+  <h2 class="jg-section-title">最近更新</h2>
+  <div class="jg-recent">
+    {{- range first 8 (sort $posts "Date" "desc") }}
+    <a class="jg-recent-item" href="{{ .RelPermalink }}">
+      <span class="jg-recent-title">{{ .Title }}</span>
+      <span class="jg-recent-date">{{ .Date.Format "2006-01-02" }}</span>
+    </a>
+    {{- end }}
+  </div>
+
+</div>
+
+{{- end }}

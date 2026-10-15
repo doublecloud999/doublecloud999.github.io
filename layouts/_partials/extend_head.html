@@ -1,0 +1,229 @@
+{{- /* ============================================================
+   自定义样式：JavaGuide 风门户（首页卡片 / 二级菜单 / 系列目录）
+   颜色全部走 PaperMod 主题变量，自动适配明暗模式
+   ============================================================ */ -}}
+<style>
+  /* ---------- 布局：列表类页面放宽 ---------- */
+  body.list .main {
+    max-width: calc(var(--nav-width) + var(--gap) * 2);
+  }
+
+  /* ---------- 顶部二级菜单 ---------- */
+  #menu > li.menu-has-children {
+    position: relative;
+  }
+  #menu .menu-caret {
+    margin-left: 4px;
+    vertical-align: middle;
+    opacity: .65;
+  }
+  #menu > li.menu-has-children > .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 60;
+    min-width: 168px;
+    margin: 0;
+    padding: 6px 0;
+    list-style: none;
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+  }
+  #menu > li.menu-has-children:hover > .submenu,
+  #menu > li.menu-has-children:focus-within > .submenu {
+    display: block;
+  }
+  #menu > li.menu-has-children > .submenu li {
+    display: block;
+    line-height: 1.4;
+  }
+  #menu > li.menu-has-children > .submenu li a {
+    display: block;
+    padding: 8px 16px;
+    color: var(--primary);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  #menu > li.menu-has-children > .submenu li a:hover {
+    color: var(--theme);
+    background: var(--primary);
+  }
+
+  /* ---------- 首页 ---------- */
+  .jg-hero {
+    text-align: center;
+    padding: 32px 16px 8px;
+  }
+  .jg-hero-title {
+    font-size: 34px;
+    line-height: 1.25;
+    margin: 0 0 8px;
+  }
+  .jg-hero-sub {
+    color: var(--secondary);
+    font-size: 16px;
+    margin: 0 0 22px;
+  }
+  .jg-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+  .jg-btn {
+    display: inline-block;
+    padding: 9px 22px;
+    font-size: 15px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--entry);
+    color: var(--primary);
+    text-decoration: none;
+    transition: all .18s ease;
+  }
+  .jg-btn:hover {
+    border-color: var(--primary);
+    transform: translateY(-1px);
+  }
+  .jg-btn-primary {
+    background: var(--primary);
+    color: var(--theme);
+    border-color: var(--primary);
+  }
+  .jg-hero-count {
+    margin: 18px 0 0;
+    font-size: 13px;
+    color: var(--secondary);
+  }
+
+  .jg-section-title {
+    margin: 40px 0 18px;
+    padding-left: 12px;
+    font-size: 21px;
+    border-left: 4px solid var(--primary);
+  }
+
+  .jg-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: var(--gap);
+  }
+  .jg-card {
+    display: flex;
+    flex-direction: column;
+    padding: 18px 20px;
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: box-shadow .18s ease, transform .18s ease;
+  }
+  .jg-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, .14);
+  }
+  .jg-card-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .jg-card-icon { font-size: 18px; }
+  .jg-card-name {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--primary);
+  }
+  .jg-card-count {
+    margin-left: auto;
+    font-size: 12px;
+    padding: 1px 9px;
+    border-radius: 999px;
+    background: var(--tertiary);
+    color: var(--content);
+  }
+  .jg-card-desc {
+    margin: 0 0 12px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--secondary);
+  }
+  .jg-card-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px dashed var(--border);
+    padding-top: 10px;
+  }
+  .jg-card-list li {
+    margin: 0 0 6px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .jg-card-list li a {
+    color: var(--content);
+    text-decoration: none;
+  }
+  .jg-card-list li a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+  }
+
+  .jg-recent {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 10px 24px;
+  }
+  .jg-recent-item {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 2px;
+    border-bottom: 1px dashed var(--border);
+    text-decoration: none;
+  }
+  .jg-recent-title { color: var(--content); font-size: 14px; }
+  .jg-recent-date { color: var(--secondary); font-size: 12px; white-space: nowrap; }
+  .jg-recent-item:hover .jg-recent-title { color: var(--primary); }
+
+  /* ---------- 文章内：本系列目录 ---------- */
+  .series-nav {
+    margin: 36px 0 8px;
+    padding: 16px 20px;
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--primary);
+    border-radius: var(--radius);
+  }
+  .series-nav-title {
+    margin: 0 0 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--primary);
+  }
+  .series-nav ol {
+    margin: 0;
+    padding-left: 20px;
+  }
+  .series-nav li {
+    margin: 4px 0;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .series-nav li a { color: var(--content); text-decoration: none; }
+  .series-nav li a:hover { text-decoration: underline; }
+  .series-nav li.is-current {
+    font-weight: 600;
+    color: var(--primary);
+  }
+  .series-nav li.is-current a { color: var(--primary); }
+
+  /* ---------- 学习路线页 ---------- */
+  .roadmap-wrap .roadmap-intro {
+    color: var(--secondary);
+    margin-bottom: 24px;
+  }
+</style>

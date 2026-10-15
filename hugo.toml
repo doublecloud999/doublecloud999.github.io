@@ -6,6 +6,7 @@ theme = 'PaperMod'
 [taxonomies]
   tag = 'tags'
   category = 'categories'
+  series = 'series'
 
 [markup]
   [markup.highlight]
@@ -16,7 +17,7 @@ theme = 'PaperMod'
 
 [params]
   author = 'doublecloud999'
-  description = '记录技术学习过程'
+  description = '记录技术学习过程 | 后端 · Agent 方向'
   defaultTheme = 'auto'
   ShowReadingTime = true
   ShowWordCount = true
@@ -25,28 +26,125 @@ theme = 'PaperMod'
   ShowBreadCrumbs = true
   ShowToc = true
   TocOpen = false
+  ShowShareButtons = false
 
-[params.profileMode]
-  enabled = true
-  title = "你好"
-  subtitle = "记录技术学习过程"
+# ---------------------------------------------------------------
+# 首页「知识体系」分区，数组顺序 = 首页卡片顺序
+# key 必须与文章 front matter 里的 categories 值完全一致
+# ---------------------------------------------------------------
+[[params.sections]]
+  key = '语法基础'
+  name = 'Java 基础'
+  desc = '数组声明与初始化、编码与字节数、类加载等容易忽略的基础细节'
 
+[[params.sections]]
+  key = '面向对象'
+  name = '面向对象'
+  desc = '类与对象、继承与 super、多态、抽象类与接口、String、包装类、泛型、反射'
+
+[[params.sections]]
+  key = '集合框架'
+  name = '集合框架'
+  desc = 'Collection / List / Map / 迭代器 / 队列'
+
+[[params.sections]]
+  key = 'IO与文件'
+  name = 'IO 与文件'
+  desc = '字节流与字符流、节点流与过滤流、缓冲流与对象流、序列化'
+
+[[params.sections]]
+  key = '并发多线程'
+  name = '并发多线程'
+  desc = '进程与线程、线程创建方式、生命周期与锁池、JVM 内存结构'
+
+[[params.sections]]
+  key = '数据库'
+  name = '数据库'
+  desc = 'MySQL 学习笔记'
+
+[[params.sections]]
+  key = '算法与数据结构'
+  name = '算法与数据结构'
+  desc = '数组、链表、双指针、滑动窗口'
+
+[[params.sections]]
+  key = 'Java 基础'
+  name = 'Java 基础(早期整合笔记)'
+  desc = '早期整篇的 Java 综合笔记'
+
+# ---------------------------------------------------------------
+# 顶部菜单：一级 + 二级
+# ---------------------------------------------------------------
 [[menu.main]]
   name = '首页'
   url = '/'
   weight = 10
 
 [[menu.main]]
-  name = '文章'
-  url = '/posts/'
+  name = '学习路线'
+  url = '/roadmap/'
   weight = 20
 
 [[menu.main]]
-  name = '分类'
-  url = '/categories/'
+  identifier = 'java'
+  name = 'Java'
+  url = '/categories/面向对象/'
   weight = 30
+
+[[menu.main]]
+  parent = 'java'
+  name = 'Java 基础'
+  url = '/categories/语法基础/'
+  weight = 1
+
+[[menu.main]]
+  parent = 'java'
+  name = '面向对象'
+  url = '/categories/面向对象/'
+  weight = 2
+
+[[menu.main]]
+  parent = 'java'
+  name = '集合框架'
+  url = '/categories/集合框架/'
+  weight = 3
+
+[[menu.main]]
+  parent = 'java'
+  name = 'IO 与文件'
+  url = '/categories/io与文件/'
+  weight = 4
+
+[[menu.main]]
+  parent = 'java'
+  name = '并发多线程'
+  url = '/categories/并发多线程/'
+  weight = 5
+
+[[menu.main]]
+  identifier = 'other'
+  name = '其他'
+  url = '/posts/'
+  weight = 40
+
+[[menu.main]]
+  parent = 'other'
+  name = '数据库'
+  url = '/categories/数据库/'
+  weight = 1
+
+[[menu.main]]
+  parent = 'other'
+  name = '算法与数据结构'
+  url = '/categories/算法与数据结构/'
+  weight = 2
 
 [[menu.main]]
   name = '标签'
   url = '/tags/'
-  weight = 40
+  weight = 50
+
+[[menu.main]]
+  name = '归档'
+  url = '/archives/'
+  weight = 60
