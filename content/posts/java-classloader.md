@@ -23,7 +23,7 @@ ShowPostNavLinks: true
 
 代码开始执行之前，先将所需要的类加载到 JVM 中，通过类加载器加载，看到以上代码会找 `String.class`。
 
-(原笔记此处为截图)
+![JDK 自带的 3 个类加载器](/images/java/classloader-jdk.png)
 
 优先从**父加载器**开始加载。
 

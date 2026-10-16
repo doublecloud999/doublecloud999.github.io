@@ -66,6 +66,6 @@ ShowPostNavLinks: true
 
 ### 3.3 如何判断一个官方类有没有重写？
 
-(原笔记此处为截图)
+![检查一个类是否重写了 equals](/images/java/equals-check-override.png)
 
 思路是去源码里看这个类有没有自己写 `equals(Object)` 方法；如果没写，那就继承自 `java.lang.Object` 的默认实现，也就是比较内存地址。

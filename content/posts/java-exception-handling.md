@@ -51,3 +51,11 @@ ShowPostNavLinks: true
 2. **为什么**:`throws` 用于声明方法可能抛出的异常;`throw` 用于手动抛出异常对象;`try...catch` 用于捕获并处理异常;`try...finally` 用于确保资源释放;`try...catch...finally` 结合两者
 3. **底层原理**:`throw` 在字节码中对应 `athrow` 指令。`try...catch` 通过异常表(Exception Table)实现,指定字节码范围、异常类型和处理代码偏移量。`finally` 通过复制代码或 `jsr` / `ret` 指令实现
 4. **边界条件**:`throw` 后不能有代码;`throws` 可以声明多个异常;`try` 块必须至少有一个 `catch` 或 `finally`;`try...finally` 没有 `catch` 时异常会向上抛出,但 `finally` 仍执行
+
+### try-catch-finally 如何使用?
+
+![try-catch-finally 的使用](/images/java/try-catch-finally-javaguide.png)
+
+<span color="red">注意:</span>如果在 finally 之前虚拟机被终止运行、或者进程被强制终止的话,finally 代码块就不会执行。
+
+![finally 不执行的情况](/images/java/finally-notice.png)

@@ -9,6 +9,8 @@ theme = 'PaperMod'
   series = 'series'
 
 [markup]
+  [markup.goldmark.renderer]
+    unsafe = true          # 允许正文里的原始 HTML，用于 Notion 标红 <span color="red">
   [markup.highlight]
     noClasses = false
     lineNos = false

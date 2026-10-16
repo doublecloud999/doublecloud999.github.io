@@ -156,6 +156,8 @@ public static void main(String[] args) {
 | 成员 | 可以有构造器、成员变量、普通方法 | 变量默认 `public static final`,方法默认 `public abstract` |
 | 字节码 | 普通的类加上 `ACC_ABSTRACT` 标记 | 单独的标记 |
 
+![接口与抽象类的异同](/images/java/interface-vs-abstract.png)
+
 ### 注意:default 方法冲突
 
 - 从 JDK 8 开始,允许接口中定义 `default` 方法(有方法体的方法)

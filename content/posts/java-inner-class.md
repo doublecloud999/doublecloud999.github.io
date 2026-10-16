@@ -61,5 +61,3 @@ ShowPostNavLinks: true
 ### 2.1 匿名内部类
 
 没有名字的内部类。
-
-> 待补充。

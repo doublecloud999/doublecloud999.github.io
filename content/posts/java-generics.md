@@ -25,13 +25,19 @@ ShowPostNavLinks: true
 ## 二、泛型的使用
 
 - **泛型类:** 一定要在 class 名后面写 `<T>`，或者 `E` / `K` / `V`；实例化泛型类的时候一定要指定 T 的具体类型
-- **泛型接口:** (原笔记此处为截图)
+- **泛型接口:**
 
-实现泛型接口可以指定类型，也可以不指定类型:(原笔记此处为截图)
+![泛型接口](/images/java/generics-interface.png)
+
+实现泛型接口可以指定类型，也可以不指定类型:
+
+![实现泛型接口的两种方式](/images/java/generics-interface-impl.png)
 
 - **泛型方法:** 注意，类型参数一定要写在**方法返回值类型前面**，写在修饰符(public static)后面
 
-(原笔记此处为两张截图)
+![泛型方法(一)](/images/java/generics-method-1.png)
+
+![泛型方法(二)](/images/java/generics-method-2.png)
 
 ## 三、泛型擦除
 

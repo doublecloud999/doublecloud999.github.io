@@ -18,7 +18,7 @@ ShowPostNavLinks: true
 - 枚举类不能被继承，因为枚举类被 `final` 修饰
 - 所有枚举类都继承一个 `java.lang.Enum` 父类
 
-(原笔记此处为枚举类定义截图)
+![枚举类定义](/images/java/enum-basics.png)
 
 这是正常的枚举类定义，注意最后一个对象后面写分号。
 
@@ -36,7 +36,7 @@ ShowPostNavLinks: true
 
 注意枚举的**构造方法**是 **private**，绝对不能用 public 修饰，绝对不允许在外面 new 枚举值。
 
-(原笔记此处为高级用法截图)
+![枚举的构造方法与高级用法](/images/java/enum-constructor.png)
 
 ## 三、怎么查看枚举的字节码
 

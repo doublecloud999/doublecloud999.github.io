@@ -17,11 +17,11 @@ ShowPostNavLinks: true
 - 数组工具类 `Arrays` 的 `toString()` 和 `equals()`
 - 数组的扩容:`System.arraycopy();`
 
-(原笔记此处为 System.arraycopy 截图)
+![数组扩容：System.arraycopy](/images/java/arrays-system-arraycopy.png)
 
 ## 二、数组的 equals 比较
 
-(原笔记此处为截图)
+![Arrays.equals 的比较逻辑](/images/java/arrays-equals.png)
 
 只要 `a == a2`，`==` 成立意味着内存地址相等，所以不用比。
 
@@ -35,7 +35,7 @@ ShowPostNavLinks: true
 
 这个工具类的构造方法是私有化的，因为工具类中所有的构造方法都是静态的，调用的时候不需要 new 对象。
 
-(原笔记此处为截图)
+![Arrays 工具类](/images/java/arrays-utils-class.png)
 
 ## 四、for-each(基础写法)
 

@@ -33,6 +33,15 @@ ShowPostNavLinks: true
 
 另:`String` 是不可变的,任何看起来修改 `String` 的操作实际上都是创建了新的 `String` 对象。这是为了线程安全、支持字符串常量池共享、缓存哈希值。
 
+### 常用构造方法
+
+![String 的常用构造方法](/images/java/string-constructors.png)
+
+### 字符串常量池
+
+- `String` 字符串常量池最新版放在**方法区**
+- 注意,垃圾回收器是不会释放常量的
+
 ---
 
 ## 二、StringBuilder
@@ -83,3 +92,9 @@ ShowPostNavLinks: true
 
 1. 为什么 `StringBuilder` 比 `StringBuffer` 快?答案是 `StringBuilder` 不需要获取和释放锁,没有多线程锁竞争带来的性能开销。如果单线程环境误用 `StringBuffer`,会导致不必要的性能损耗
 2. **锁的粒度**:指锁保护的范围大小,是整个对象。`StringBuffer` 的锁加在方法上,只要调用任何一个方法都会锁住整个对象,并发性能比较差;要优化就要减小锁的粒度
+
+### 3.2 StringBuilder / StringBuffer 的构造与扩容
+
+- `StringBuffer` 的构造:
+
+![StringBuffer 的构造](/images/java/stringbuffer-construct.png)

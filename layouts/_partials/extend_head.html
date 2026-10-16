@@ -226,4 +226,14 @@
     color: var(--secondary);
     margin-bottom: 24px;
   }
+
+  /* ---------- 正文标红（Notion 的 <span color="red">） ---------- */
+  .post-content span[color="red"],
+  .md-content span[color="red"] {
+    color: #d32f2f;
+  }
+  :root[data-theme="dark"] .post-content span[color="red"],
+  :root[data-theme="dark"] .md-content span[color="red"] {
+    color: #ff6b6b;
+  }
 </style>
