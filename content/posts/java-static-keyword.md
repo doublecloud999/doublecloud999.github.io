@@ -1,7 +1,7 @@
 ---
 title: "Java static 关键字"
 date: 2026-09-21T21:49:02+08:00
-draft: false
+draft: true
 weight: 24
 description: "static 的语义:属于类而不是对象、类加载阶段的初始化时机、静态方法不能访问非静态成员、静态代码块只执行一次。"
 tags: ["Java", "static", "面向对象"]

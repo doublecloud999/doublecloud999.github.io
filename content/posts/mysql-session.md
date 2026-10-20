@@ -1,7 +1,7 @@
 ---
 title: "MySQL:会话"
 date: 2026-10-15T10:19:00+08:00
-draft: false
+draft: true
 weight: 90
 description: "MySQL 连接请求与会话的关系。笔记刚建立，持续补充中。"
 tags: ["MySQL", "数据库", "会话"]

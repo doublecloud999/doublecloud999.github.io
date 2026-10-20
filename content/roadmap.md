@@ -35,7 +35,6 @@ ShowPostNavLinks: false
 ### 2.3 继承与多态
 
 - [继承与 super](/posts/java-inheritance-super/) — 字段隐藏、`super` 访问父类成员、向上转型
-- [static 关键字](/posts/java-static-keyword/) — 类加载阶段的赋值、静态代码块
 - [多态](/posts/java-polymorphism/) — 编译时多态与运行时多态、三个成立条件
 - [抽象类与接口](/posts/java-abstract-interface/) — `abstract`、`interface`、default 方法冲突
 - [final、finally 与 finalize](/posts/java-final-finally-finalize/) — 三个容易混的概念，以及 finally 的返回值覆盖
@@ -55,7 +54,6 @@ ShowPostNavLinks: false
 
 - [枚举 enum](/posts/java-enum/) — 枚举是 final 类、构造方法必须 private、`values()`/`valueOf()`
 - [泛型](/posts/java-generics/) — 泛型类/接口/方法、类型擦除、桥方法、通配符
-- [反射 Reflection](/posts/java-reflection/) — 运行时探知并操作类与对象
 
 ### 2.7 JVM 相关
 
@@ -78,7 +76,17 @@ ShowPostNavLinks: false
 
 ## 六、数据库
 
-- [MySQL:会话](/posts/mysql-session/) — 连接请求与会话（持续补充）
+> MySQL 笔记还在整理中，补全后上线。
+
+---
+
+## 七、算法与数据结构
+
+- [算法笔记:链表、双指针与区间和](/posts/algo-basics/) — 通用注意细节、链表拆节点、二分查找、移除元素、平方排序、长度最小子数组、螺旋矩阵、区间和
+
+## 八、Agent
+
+- [Agent 入门:AgentLoop、PEAS 与三种推理范式](/posts/agent-loop-basics/) — 智能体循环、环境四特性、ReAct / Plan and Solve / Reflection、采样参数与 token、幻觉、Decoder-Only 与自注意力
 
 ---
 
