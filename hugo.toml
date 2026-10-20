@@ -60,11 +60,6 @@ theme = 'PaperMod'
   desc = '进程与线程、线程创建方式、生命周期与锁池、JVM 内存结构'
 
 [[params.sections]]
-  key = '数据库'
-  name = '数据库'
-  desc = 'MySQL 学习笔记'
-
-[[params.sections]]
   key = '算法与数据结构'
   name = '算法与数据结构'
   desc = '数组、链表、双指针、滑动窗口、螺旋矩阵、区间和'
@@ -139,12 +134,6 @@ theme = 'PaperMod'
   name = '其他'
   url = '/posts/'
   weight = 40
-
-[[menu.main]]
-  parent = 'other'
-  name = '数据库'
-  url = '/categories/数据库/'
-  weight = 1
 
 [[menu.main]]
   parent = 'other'
