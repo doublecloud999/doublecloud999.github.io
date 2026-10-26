@@ -514,4 +514,67 @@
     }
     .sb-toggle::before { content: "☰"; font-size: 13px; }
   }
+
+  /* ---------- 章节页里的「交互内容」入口卡片 ---------- */
+  .section-intro { margin-bottom: 4px; }
+
+  .extra-links { margin: 22px 0 30px; }
+  .extra-links-label {
+    margin: 0 0 10px;
+    font-size: 11.5px;
+    letter-spacing: .06em;
+    color: var(--secondary);
+  }
+  .extra-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 18px;
+    margin-bottom: 10px;
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--primary);
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+  }
+  .extra-card:hover {
+    transform: translateY(-1px);
+    border-color: var(--primary);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .16);
+  }
+  .extra-card-icon {
+    flex: none;
+    font-size: 17px;
+    color: var(--primary);
+    line-height: 1;
+  }
+  .extra-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+  }
+  .extra-card-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--primary);
+  }
+  .extra-card-desc {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--secondary);
+  }
+  .extra-card-go {
+    margin-left: auto;
+    flex: none;
+    font-size: 13px;
+    color: var(--secondary);
+  }
+  .extra-card:hover .extra-card-go { color: var(--primary); }
+
+  @media (max-width: 767px) {
+    .extra-card { gap: 10px; padding: 14px 14px; }
+    .extra-card-go { display: none; }
+  }
 </style>
