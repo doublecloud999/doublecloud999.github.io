@@ -124,6 +124,12 @@ theme = 'PaperMod'
   weight = 5
 
 [[menu.main]]
+  parent = 'java'
+  name = '集合体系图'
+  url = '/collections/'
+  weight = 6
+
+[[menu.main]]
   identifier = 'nav-agent'
   name = 'Agent'
   url = '/categories/agent/'

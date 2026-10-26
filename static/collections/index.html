@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Java 集合体系 · 交互图 | 技术笔记</title>
+<meta name="description" content="Java 集合框架的交互式继承图。点开每个类，看它继承谁、实现了什么接口、有哪些方法和源码级字段，以及底层结构、扩容机制和常见坑。方法签名按 JDK 17 核对。">
+<meta name="theme-color" content="#0d1117">
+<link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+<noscript><div class="noscript">这个页面靠 JavaScript 渲染交互图，请开启脚本后刷新。</div></noscript>
+<div class="app">
+  <header class="topbar">
+    <a class="back" href="/">&#8592; 技术笔记</a>
+    <div class="brand">Java 集合体系<span>21 个节点 · 点开看字段、方法、坑和面试点</span></div>
+    <div class="search">
+      <span class="ico"></span>
+      <input id="q" placeholder="搜类名或方法，如 add、扩容" autocomplete="off" aria-label="搜索类名或方法">
+      <span class="kbd">/</span>
+    </div>
+    <button class="btn" id="btnCompare">对比</button>
+  </header>
+
+  <main class="stage">
+    <div class="canvas">
+      <svg id="graph" viewBox="0 0 1260 690" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Java 集合框架继承关系图"></svg>
+      <div class="legend">
+        <span class="l-impl"><i></i>implements 接口</span>
+        <span class="l-ext"><i></i>extends 继承</span>
+      </div>
+      <div class="hint" id="hint">悬停点亮继承链 · 点击看方法</div>
+    </div>
+    <aside class="drawer" id="drawer">
+      <div id="dhead"></div>
+      <div class="dbody" id="dbody"></div>
+    </aside>
+  </main>
+
+  <section class="extra">
+    <div class="lab"><b>图外补充</b> · 原图没画，但面试和项目里躲不开的<span class="credit">方法签名按 JDK 17 核对 · 示例代码经 javac 编译</span></div>
+    <div class="extras" id="extras"></div>
+  </section>
+</div>
+<script src="./assets/data.js"></script>
+<script src="./assets/app.js"></script>
+</body>
+</html>
