@@ -9,47 +9,105 @@
   }
 
   /* ---------- 顶部二级菜单 ---------- */
+  /* 主题给 .menu 加了 overflow-x:auto：一个轴不是 visible 时另一轴会变成 auto，
+     绝对定位的下拉菜单因此被裁切，挤出横向+纵向两条滚动条。这里放开。 */
+  #menu {
+    overflow: visible;
+    flex-wrap: wrap;
+    row-gap: 2px;
+  }
   #menu > li.menu-has-children {
     position: relative;
   }
   #menu .menu-caret {
     margin-left: 4px;
     vertical-align: middle;
-    opacity: .65;
+    opacity: .6;
+    transition: transform .18s ease;
+  }
+  #menu > li.menu-has-children:hover > a .menu-caret,
+  #menu > li.menu-has-children.open > a .menu-caret {
+    transform: rotate(180deg);
   }
   #menu > li.menu-has-children > .submenu {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    left: -12px;
     z-index: 60;
-    min-width: 168px;
+    min-width: 176px;
     margin: 0;
-    padding: 6px 0;
+    padding: 6px;
     list-style: none;
     background: var(--entry);
     border: 1px solid var(--border);
-    border-radius: var(--radius);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+    border-radius: 10px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .22);
   }
   #menu > li.menu-has-children:hover > .submenu,
-  #menu > li.menu-has-children:focus-within > .submenu {
+  #menu > li.menu-has-children:focus-within > .submenu,
+  #menu > li.menu-has-children.open > .submenu {
     display: block;
   }
   #menu > li.menu-has-children > .submenu li {
     display: block;
-    line-height: 1.4;
+    line-height: 1.45;
   }
   #menu > li.menu-has-children > .submenu li a {
     display: block;
-    padding: 8px 16px;
+    padding: 7px 12px;
+    border-radius: 6px;
+    font-size: 15px;
     color: var(--primary);
     text-decoration: none;
     white-space: nowrap;
   }
   #menu > li.menu-has-children > .submenu li a:hover {
-    color: var(--theme);
-    background: var(--primary);
+    background: var(--tertiary);
+  }
+  /* 中窄屏：logo 一行、菜单一行，避免 space-between 把 logo 挤到第二行 */
+  @media (max-width: 900px) {
+    .header-nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .logo,
+    #menu {
+      width: 100%;
+    }
+  }
+  /* 窄屏：展开的那一项占满整行，下拉变成内联手风琴，不依赖 hover */
+  @media (max-width: 767px) {
+    #menu {
+      align-content: flex-start;
+      row-gap: 0;
+    }
+    #menu > li.menu-has-children.open {
+      flex-basis: 100%;
+    }
+    #menu > li.menu-has-children > .submenu {
+      position: static;
+      min-width: 0;
+      padding: 2px 0 6px;
+      border: none;
+      border-left: 2px solid var(--border);
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+    #menu > li.menu-has-children > .submenu li a {
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+  }
+
+  /* ---------- 面包屑 ---------- */
+  .breadcrumbs .bc-current {
+    color: var(--secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 24em;
   }
 
   /* ---------- 首页 ---------- */
@@ -130,7 +188,19 @@
     gap: 8px;
     margin-bottom: 8px;
   }
-  .jg-card-icon { font-size: 18px; }
+  .jg-card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 7px;
+    background: var(--tertiary);
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+  }
   .jg-card-name {
     font-size: 17px;
     font-weight: 600;
@@ -151,11 +221,11 @@
     color: var(--secondary);
   }
   .jg-card-list {
+    flex: 1;
     margin: 0;
-    padding: 0;
+    padding: 10px 0 0;
     list-style: none;
     border-top: 1px dashed var(--border);
-    padding-top: 10px;
   }
   .jg-card-list li {
     margin: 0 0 6px;
@@ -167,6 +237,18 @@
     text-decoration: none;
   }
   .jg-card-list li a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+  }
+
+  .jg-card-more {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--secondary);
+    text-decoration: none;
+  }
+  .jg-card-more:hover {
     color: var(--primary);
     text-decoration: underline;
   }

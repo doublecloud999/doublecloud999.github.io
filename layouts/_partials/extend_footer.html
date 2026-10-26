@@ -1,0 +1,35 @@
+{{- /* Footer custom content area start */ -}}
+<script>
+  // 二级菜单：窄屏点击展开（桌面靠 hover，已可用）
+  (function () {
+    var items = document.querySelectorAll('#menu > li.menu-has-children');
+    if (!items.length) return;
+
+    function closeAll(except) {
+      items.forEach(function (li) {
+        if (li !== except) li.classList.remove('open');
+      });
+    }
+
+    items.forEach(function (li) {
+      var link = li.querySelector(':scope > a');
+      if (!link) return;
+      link.addEventListener('click', function (e) {
+        if (window.matchMedia('(min-width: 768px)').matches) return; // 桌面直接跳转
+        e.preventDefault();
+        var willOpen = !li.classList.contains('open');
+        closeAll(li);
+        li.classList.toggle('open', willOpen);
+      });
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('#menu')) closeAll(null);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeAll(null);
+    });
+  })();
+</script>
+{{- /* Footer custom content area end */ -}}

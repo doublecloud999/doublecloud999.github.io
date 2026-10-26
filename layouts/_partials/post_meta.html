@@ -1,0 +1,13 @@
+{{- $meta := slice }}
+
+{{- if not .Date.IsZero -}}
+    {{- $meta = $meta | append (printf "<span>%s</span>" (.Date.Format "2006-01-02")) }}
+{{- end }}
+
+{{- if (.Param "ShowReadingTime") -}}
+    {{- $meta = $meta | append (printf "<span>约 %d 分钟读完</span>" .ReadingTime) }}
+{{- end }}
+
+{{- with $meta }}
+    {{- delimit . "&nbsp;·&nbsp;" | safeHTML -}}
+{{- end -}}

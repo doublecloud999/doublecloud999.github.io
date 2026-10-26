@@ -25,18 +25,25 @@
     {{- $list := where $posts "Params.categories" "intersect" (slice $cat) }}
     {{- $list = sort $list "Params.weight" "asc" }}
     {{- if gt (len $list) 0 }}
+    {{- $catURL := "categories/" | absLangURL }}
+    {{- with site.GetPage (printf "/categories/%s" $cat) }}{{ $catURL = .RelPermalink }}{{ end }}
     <div class="jg-card">
       <div class="jg-card-head">
-        <span class="jg-card-icon">{{ with .icon }}{{ . }}{{ else }}📘{{ end }}</span>
+        <span class="jg-card-icon">{{ printf "%.1s" .name }}</span>
         <span class="jg-card-name">{{ .name }}</span>
         <span class="jg-card-count">{{ len $list }}</span>
       </div>
       <p class="jg-card-desc">{{ .desc }}</p>
       <ul class="jg-card-list">
-        {{- range $list }}
+        {{- range first 5 $list }}
         <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
         {{- end }}
       </ul>
+      {{- if gt (len $list) 5 }}
+      <a class="jg-card-more" href="{{ $catURL }}">查看全部 {{ len $list }} 篇<span aria-hidden="true"> →</span></a>
+      {{- else }}
+      <a class="jg-card-more" href="{{ $catURL }}">进入本章<span aria-hidden="true"> →</span></a>
+      {{- end }}
     </div>
     {{- end }}
     {{- end }}
