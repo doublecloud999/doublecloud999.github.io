@@ -1,6 +1,6 @@
 {{- define "main" }}
 
-{{- $posts := where site.RegularPages "Section" "posts" }}
+{{- $posts := where site.RegularPages "Params.categories" "!=" nil }}
 {{- $sorted := sort $posts "Params.weight" "asc" }}
 
 <div class="jg-home">

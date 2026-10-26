@@ -1,0 +1,42 @@
+{{- /* 左侧章节树：顶层 section → 子章节(details) → 页面 */ -}}
+<aside class="doc-sidebar" id="docSidebar">
+  <nav class="sb-inner" aria-label="章节目录">
+    {{- $cur := . -}}
+    {{- range .Site.Sections.ByWeight }}
+      {{- $section := . }}
+      <div class="sb-group">
+        <a class="sb-group-title" href="{{ $section.RelPermalink }}">{{ $section.Title }}</a>
+
+        {{- range $section.Sections.ByWeight }}
+          {{- $chapter := . }}
+          {{- $isCur := or (eq $cur.RelPermalink $chapter.RelPermalink) (in $cur.RelPermalink $chapter.RelPermalink) }}
+          <details class="sb-chapter"{{ if $isCur }} open{{ end }}>
+            <summary>
+              <a href="{{ $chapter.RelPermalink }}">{{ $chapter.Title }}</a>
+            </summary>
+            <ul>
+              {{- range $chapter.RegularPages.ByWeight }}
+              <li><a href="{{ .RelPermalink }}"{{ if eq .RelPermalink $cur.RelPermalink }} class="active"{{ end }}>{{ .Title }}</a></li>
+              {{- end }}
+              {{- with $chapter.Params.extra_links }}
+                {{- range . }}
+              <li class="sb-extra"><a href="{{ .url }}">{{ .name }}</a></li>
+                {{- end }}
+              {{- end }}
+            </ul>
+          </details>
+        {{- end }}
+
+        {{- $direct := $section.RegularPages.ByWeight }}
+        {{- if gt (len $direct) 0 }}
+        <ul class="sb-flat">
+          {{- range $direct }}
+          <li><a href="{{ .RelPermalink }}"{{ if eq .RelPermalink $cur.RelPermalink }} class="active"{{ end }}>{{ .Title }}</a></li>
+          {{- end }}
+        </ul>
+        {{- end }}
+      </div>
+    {{- end }}
+  </nav>
+</aside>
+<div class="sb-mask" id="sbMask"></div>

@@ -15,7 +15,7 @@
       var link = li.querySelector(':scope > a');
       if (!link) return;
       link.addEventListener('click', function (e) {
-        if (window.matchMedia('(min-width: 768px)').matches) return; // 桌面直接跳转
+        if (window.matchMedia('(min-width: 768px)').matches) return;
         e.preventDefault();
         var willOpen = !li.classList.contains('open');
         closeAll(li);
@@ -30,6 +30,82 @@
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') closeAll(null);
     });
+  })();
+
+  // 左侧章节目录：窄屏抽屉
+  (function () {
+    var btn = document.getElementById('sbToggle');
+    var side = document.getElementById('docSidebar');
+    var mask = document.getElementById('sbMask');
+    if (!btn || !side) return;
+
+    function setOpen(on) {
+      side.classList.toggle('open', on);
+      if (mask) mask.classList.toggle('open', on);
+      btn.setAttribute('aria-expanded', on ? 'true' : 'false');
+      document.body.style.overflow = on ? 'hidden' : '';
+    }
+
+    btn.addEventListener('click', function () {
+      setOpen(!side.classList.contains('open'));
+    });
+    if (mask) mask.addEventListener('click', function () { setOpen(false); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') setOpen(false);
+    });
+    side.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') setOpen(false);
+    });
+  })();
+
+  // 右侧本页目录：滚动高亮
+  (function () {
+    var toc = document.getElementById('docToc');
+    if (!toc) return;
+    var links = [].slice.call(toc.querySelectorAll('a[href^="#"]'));
+    if (!links.length) return;
+
+    var map = {};
+    var heads = [];
+    links.forEach(function (a) {
+      var id = decodeURIComponent(a.getAttribute('href').slice(1));
+      var el = document.getElementById(id);
+      if (el) {
+        map[id] = a;
+        heads.push(el);
+      }
+    });
+    if (!heads.length) return;
+
+    var current = null;
+    function activate(id) {
+      if (current === id) return;
+      current = id;
+      links.forEach(function (a) { a.classList.remove('active'); });
+      if (map[id]) map[id].classList.add('active');
+    }
+
+    // 用滚动位置算，不靠 IntersectionObserver：
+    // 标题间距大时 IO 的窄判定带会整段不命中，反而一个高亮都不给。
+    var ticking = false;
+    function update() {
+      ticking = false;
+      var line = 120, hit = null;
+      heads.forEach(function (h) {
+        if (h.getBoundingClientRect().top <= line) hit = h.id;
+      });
+      if (!hit) hit = heads[0].id;
+      activate(hit);
+    }
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(update);
+      }
+    }, { passive: true });
+    window.addEventListener('resize', update);
+    update();
   })();
 </script>
 {{- /* Footer custom content area end */ -}}
